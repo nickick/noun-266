@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Header from "./Header";
 import SocialBar from "./SocialBar";
 
@@ -13,6 +14,7 @@ const Layout = ({
       <Header />
       <SocialBar />
       {children}
+      <Footer />
     </>
   )
 }

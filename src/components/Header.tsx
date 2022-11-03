@@ -1,5 +1,6 @@
-type HeaderProps = {
+import Links from "./Links";
 
+type HeaderProps = {
 }
 
 const Header = ({
@@ -10,18 +11,7 @@ const Header = ({
         Noun266
       </div>
       <div className="flex justify-end items-center font-normal space-x-6 p-6">
-        <div>
-          Album
-        </div>
-        <div>
-          Watch video
-        </div>
-        <div>
-          Merch
-        </div>
-        <div>
-          Bio
-        </div>
+        <Links className="flex space-x-12" />
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Video = () => {
   return (
-    <section>
+    <section id='video'>
       <div className='text-[2rem] w-4/5 flex flex-row flex-nowrap mx-auto'>
         <p className='whitespace-nowrap pr-4'>
           Watch the video

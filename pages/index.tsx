@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/future/image'
 import NonFungibleMerch from '../src/components/NonFungibleMerch'
 import Video from '../src/components/Video'
+import About from '../src/components/About'
 
 const Home: NextPage = () => (
   <>
@@ -46,8 +47,8 @@ const Home: NextPage = () => (
           </h1>
         </div>
       </div>
-      <div className='relative text-white -mt-28 z-30'>
-        <div className='flex relative top-12 justify-center'>
+      <div className='relative -mt-28 z-30'>
+        <div className='flex relative top-12 justify-center' id='album'>
           <div className='flex flex-col items-centered relative left-36 justify-center'>
             <p className='text-5xl font-sans font-bold capitalize w-72'>
               “We can have fun”
@@ -59,15 +60,14 @@ const Home: NextPage = () => (
               Single side colored LP, 180g
             </p>
           </div>
-          <Image src='/vinyl.png' width='946' height='418' alt='album' className='relative left-32' />
+          <Image src='/vinyl.png' width='946' height='418' alt='album' className='relative' />
         </div>
         <div className='bg-gradient-to-b from-[#24202F] to-black w-full h-64 z-10' />
       </div>
       <Video />
       <NonFungibleMerch />
+      <About />
     </main>
-    <footer>
-    </footer>
   </>
 )
 
