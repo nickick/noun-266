@@ -9,11 +9,11 @@ const Layout = ({
   children
 }: LayoutProps) => {
   return (
-    <div>
+    <>
       <Header />
       <SocialBar />
       {children}
-    </div>
+    </>
   )
 }
 
