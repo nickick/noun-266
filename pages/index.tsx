@@ -60,7 +60,7 @@ const Home: NextPage = () => (
       <div className='relative -mt-28 z-30'>
         <div className='flex flex-col md:flex-row relative top-12 justify-center' id='album'>
           <div className='flex flex-col items-centered relative md:left-36 justify-center'>
-            <p className='text-5xl font-sans font-bold capitalize w-72 left-10 relative'>
+            <p className='text-5xl font-sans font-bold capitalize w-72 relative'>
               “We can have fun”
             </p>
             <p className='w-80 mt-8 mb-6 mx-auto'>
