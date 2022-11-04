@@ -1,7 +1,6 @@
-import Image from 'next/future/image'
-import React, { useState } from 'react'
-import MintModal from '../MintModal'
-import MerchTile, { merchTiles } from './Merchtile';
+import { useState } from 'react';
+import MintModal from '../MintModal';
+import MerchTile, { merchTiles } from './MerchTile';
 
 const NonFungibleMerch = () => {
   const [selectedMerchTile, setSelectedMerchTile] = useState<number>();

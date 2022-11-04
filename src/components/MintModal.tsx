@@ -2,7 +2,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/future/image';
 import { Dispatch, Fragment, SetStateAction, useRef } from 'react';
-import { MerchInfo, merchTiles } from './NonFungibleMerch/Merchtile';
+import { MerchInfo, merchTiles } from './NonFungibleMerch/MerchTile';
 
 export default function MintModal({
   setOpen,
