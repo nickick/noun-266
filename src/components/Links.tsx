@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/future/image"
 import React from "react"
 
 const links = [
@@ -52,14 +52,16 @@ const Links = ({
 export default Links
 
 export const SocialLinks = ({
-  className
+  className,
+  size,
 }: {
   className?: string
+  size?: number
 }) => (
   <div className={className}>
-    <Image src='/icons/twitter.svg' height='24' width='24' alt='Twitter profile' />
-    <Image src='/icons/youtube.svg' height='24' width='24' alt='Youtube profile' />
-    <Image src='/icons/spotify.svg' height='24' width='24' alt='Spotify profile' />
-    <Image src='/icons/noun.svg'    height='24' width='24' alt='Noun profile' />
+    <Image src='/icons/twitter.svg' height={size || 24} width={size || 24} alt='Twitter profile' />
+    <Image src='/icons/youtube.svg' height={size || 24} width={size || 24} alt='Youtube profile' />
+    <Image src='/icons/spotify.svg' height={size || 24} width={size || 24} alt='Spotify profile' />
+    <Image src='/icons/noun.svg'    height={size || 24} width={size || 24} alt='Noun profile' />
   </div>
 )

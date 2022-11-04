@@ -3,8 +3,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='w-4/5 mx-auto border rounded-[40px] pt-24 pl-24 pb-16 text-base leading-8 relative mt-24'>
-      <div className='w-[25.5rem] space-y-8'>
+    <div className='md:w-4/5 mx-auto border rounded-[40px] pt-24 pl-24 pb-16 text-base leading-8 relative mt-24'>
+      <div className='md:w-[25.5rem] space-y-8'>
         <h3 className='text-5xl'>
           About the Noun 266
         </h3>
