@@ -12,6 +12,7 @@ const Layout = ({
   return (
     <>
       <Header />
+      <Header borderOnly />
       <SocialBar />
       {children}
       <Footer />

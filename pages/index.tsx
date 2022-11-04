@@ -15,13 +15,13 @@ const Home: NextPage = () => (
     </Head>
     <main className='bg-black w-full h-full min-h-screen text-white'>
       <div className='relative h-screen'>
-        <Image src='/noun-266-dj.webp' alt='Noun 266 person' width='626' height='1112' className='relative mx-auto z-20 object-contain h-full transform -translate-y-32' style={{aspectRatio: '626 / 1112'}}/>
-        <div className='absolute h-1/2 w-full mx-auto z-20 top-1/2 bg-gradient-to-b from-transparent via-black to-black' />
-        <div className='absolute h-[60rem] md:w-[60rem] z-0 transform top-0 -translate-x-1/2 left-1/2 -translate-y-72 animate-pulse' style={{
+        <Image src='/noun-266-dj.webp' alt='Noun 266 person' width='626' height='1112' className='relative mx-auto z-20 object-contain h-[70%] md:h-full transform -translate-y-28 md:-translate-y-32' style={{aspectRatio: '626 / 1112'}}/>
+        <div className='absolute h-1/2 w-full mx-auto z-20 top-36 md:top-1/2 bg-gradient-to-b from-transparent via-black to-black' />
+        <div className='absolute h-[60rem] w-4/5 md:w-[60rem] z-0 transform top-0 -translate-x-1/2 left-1/2 -translate-y-72 animate-pulse' style={{
           background: 'radial-gradient(#5F40B5, #000, #000)'
         }} />
       </div>
-      <div className='absolute top-1/2 z-20 left-12'>
+      <div className='absolute top-1/3 md:top-1/2 z-20 left-12'>
         <div className='relative'>
           <h1 className='text-5xl leading-snug md:text-8xl font-bold'>
             <span>
@@ -55,22 +55,22 @@ const Home: NextPage = () => (
             </span>
           </h1>
         </div>
-        <SocialLinks className='w-full flex mx-auto mt-10 md:hidden justify-between' size={48} />
+        <SocialLinks className='w-full flex mx-auto mt-10 md:hidden space-x-6' size={36} />
       </div>
       <div className='relative -mt-28 z-30'>
         <div className='flex flex-col md:flex-row relative top-12 justify-center' id='album'>
           <div className='flex flex-col items-centered relative md:left-36 justify-center'>
-            <p className='text-5xl font-sans font-bold capitalize w-72'>
+            <p className='text-5xl font-sans font-bold capitalize w-72 left-10 relative'>
               “We can have fun”
             </p>
             <p className='w-80 mt-8 mb-6 mx-auto'>
             A debut single by Noun 266 availabe in fresh pressed vinyl for you listening pleasure.
             </p>
-            <p className='w-80'>
+            <p className='w-80 ml-8 md:ml-0'>
               Single side colored LP, 180g
             </p>
           </div>
-          <Image src='/vinyl.png' width='946' height='418' alt='album' className='relative' />
+          <Image src='/vinyl.png' width='946' height='418' alt='album' className='relative mt-10 md:mt-0' />
         </div>
         <div className='bg-gradient-to-b from-[#24202F] to-black w-full h-64 z-10' />
       </div>
