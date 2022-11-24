@@ -10,7 +10,7 @@ import React, { createContext, useCallback, useEffect, useState } from 'react';
 import keccak256 from 'keccak256';
 import { MerkleTree } from 'merkletreejs';
 import contractAbi from './contractAbi.json';
-import allowlist from './allowlist.json';
+import allowlist from './allowList.json';
 import useInterval from '../useInterval';
 import isDebug from '../utils/debug';
 
