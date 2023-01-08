@@ -5,7 +5,7 @@ import Links, { SocialLinks } from './Links'
 const Footer = () => {
   return (
     <footer className='relative'>
-      <div className='w-4/5 mx-auto pt-24 relative'>
+      <div className='w-4/5 mx-auto pt-24 relative max-w-screen-xl'>
         <Image src='/noun-266.webp' height='60' width='96' alt='Noun 266' className='absolute md:hidden right-0 top-8 md:top-48 md:bottom-0 md:left-0 md:h-24 w-[60px]'/>
         <Image src='/noun-266.webp' height='60' width='96' alt='Noun 266' className='absolute hidden md:block md:bottom-0 md:left-0 md:h-24 w-[60px]'/>
         <div className='flex flex-col md:flex-row justify-between'>
