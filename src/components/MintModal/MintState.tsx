@@ -3,6 +3,7 @@ import Image from 'next/future/image';
 import Link from 'next/link';
 import { useContext, useRef, useState } from 'react';
 import { ContractContext } from '../ContractContext';
+import TransactionStatus from './TransactionStatus';
 
 const MintState = ({
   merchTile,
@@ -53,6 +54,7 @@ const MintState = ({
               That way we can know who the true fans are.
             </p>
           </div>
+          <TransactionStatus />
         </div>
         {(selectedMerchTile !== undefined && merchTile) && (
           <div className='space-y-4'>

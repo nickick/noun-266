@@ -5,7 +5,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { ethers } from 'ethers';
+import { BigNumber, ethers } from 'ethers';
 import React, { createContext, useCallback, useEffect, useState } from 'react';
 import useInterval from '../useInterval';
 import isDebug from '../utils/debug';
