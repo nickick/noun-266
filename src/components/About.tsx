@@ -6,10 +6,10 @@ const About = () => {
     <div className='md:w-4/5 md:mx-auto border mx-6 rounded-[40px] p-6 pb-16 pt-48 md:pt-24 md:pl-24 md:pb-16 text-base leading-8 relative mt-48 md:mt-24 max-w-screen-xl' id="bio">
       <div className='md:w-[25.5rem] space-y-8 relative z-30'>
         <h3 className='text-5xl'>
-          About the Noun 266
+          Noun 266
         </h3>
         <p className='text-base leading-8'>
-          Noun266 was born on April 7, 2022, in the Nouns family of two hundred twenty-six. He tried a bunch of hobbies very early in his life, but once he first touched the electronic music pad, it hit home. Black-rgb glasses and the equalizer head all of a sudden felt home. In no time he hit up his buddy Richerd Intern about the &quot;We Can Have Fun&quot; music video and they were off shooting and recording and shooting and recording. Rest is history you can listen on Spotify, Apple Music, and other streaming services.
+          Born '266' on April 7th, 2022 to the Nouns family, Noun 266 was destined for music greatness. With his signature Chart Head and clean aesthetics, he found his calling collaborating with Richerd Intern in late 2022. Now having performed on national television as a world-renowned DJ, Noun 266 is ready to take the world by storm with his debut single, "We Can Have Fun".
         </p>
       </div>
       <div className='absolute -top-40 md:-top-20 md:right-0 md:bottom-0'>
