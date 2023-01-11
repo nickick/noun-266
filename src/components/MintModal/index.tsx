@@ -1,9 +1,11 @@
 import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/future/image';
 import { Dispatch, Fragment, SetStateAction, useContext, useRef, useState } from 'react';
+import { ContractContext } from '../ContractContext';
 import { merchTiles } from '../NonFungibleMerch/MerchTile';
-import ShareState from './ShareState';
+import Notification from '../Notification';
 import MintState from './MintState';
+import ShareState from './ShareState';
 
 export default function MintModal({
   setOpen,
@@ -18,9 +20,12 @@ export default function MintModal({
   const cancelButtonRef = useRef(null);
   const [dialogStep, setDialogStep] = useState(0);
 
+  const { setErrorMessage } = useContext(ContractContext)
+
   const onClose = () => {
     setDialogStep(0);
     setOpen(undefined);
+    setErrorMessage(undefined);
   }
 
   const merchTile = merchTiles[selectedMerchTile || 0]
@@ -57,6 +62,7 @@ export default function MintModal({
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <div className='relative'>
+                <Notification />
                 <div className='absolute top-2 right-2 sm:-top-4 sm:-right-12 text-white z-50'>
                   <Image src='/icons/close.svg' height='30' width='30' alt='close' />
                 </div>

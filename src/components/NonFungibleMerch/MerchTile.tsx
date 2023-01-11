@@ -31,7 +31,6 @@ const MerchTile = ({
   setOpen?: React.Dispatch<React.SetStateAction<number | undefined>>
 }) => {
   const onClick = () => {
-    console.log('here')
     if (setOpen) {
       setOpen(index)
     }
@@ -52,7 +51,7 @@ export const merchTiles = [
   {
     title: '266 Cereal',
     image: '/tiles/cereal.jpg',
-    price: 'Free + gas'
+    price: 'Free + gas',
   },
   {
     title: '266 Unisex T-shirt',

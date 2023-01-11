@@ -37,7 +37,10 @@ const ShareState = ({
           <button
             type="button"
             className="mt-3 inline-flex justify-center border border-gray-300 bg-white px-8 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-6 sm:w-auto sm:text-sm"
-            onClick={() => setDialogStep(1)}
+            onClick={() => {
+              setDialogStep(1)
+              window.open('https://twitter.com/share?text=DJ%20%40Noun_266%20just%20dropped%20his%20latest%20single%21', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+            }}
             ref={cancelButtonRef}
           >
             Share tweet

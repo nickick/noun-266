@@ -1,7 +1,7 @@
 import { Dialog } from '@headlessui/react';
 import Image from 'next/future/image';
-import { Dispatch, SetStateAction, useContext, useRef } from 'react';
-import { ContractContext, ContractStatus } from '../ContractContext';
+import { useContext, useRef } from 'react';
+import { ContractContext } from '../ContractContext';
 
 const MintState = ({
   merchTile,
@@ -21,8 +21,9 @@ const MintState = ({
   } = useContext(ContractContext)
 
   const onClick = () => {
-    if (currentAccount) {
-      mintPublic(1);
+    if (currentAccount && selectedMerchTile !== undefined) {
+      // selectedMerchTile is 0 index but NFTs are indexed starting at 1
+      mintPublic(selectedMerchTile + 1);
     } else {
       connectWallet();
     }
