@@ -42,10 +42,10 @@ const Home: NextPage = () => (
                 Available
                 <br className='md:hidden' />
                 <div className='flex'>
-                  <button className='px-12 md:mx-4 mr-4 md:mr-0 h-[5.5rem] border border-white rounded-full relative flex justify-center items-center bg-black'>
+                  <button className='px-12 md:mx-4 mr-4 md:mr-4 h-[5.5rem] border border-white rounded-full relative flex justify-center items-center bg-black'>
                     <Image src='/play-button.svg' alt='Noun 266 button' height='32' width='32' className='absolute h-8 w-8 top-1/2 left-9 transform -translate-y-1/2' />
                     &nbsp;
-                    <span className='text-white font-normal relative left-3' style={{
+                    <span className='text-white font-semi-bold relative left-3' style={{
                       fontSize: '2rem',
                     }}>
                       Play
@@ -63,18 +63,18 @@ const Home: NextPage = () => (
       </div>
       <div className='relative -mt-28 z-30'>
         <div className='flex flex-col md:flex-row relative top-12 justify-center' id='album'>
-          <div className='flex flex-col items-centered relative md:left-36 justify-center'>
+          <div className='flex flex-col items-centered relative md:left-0 justify-center'>
             <p className='text-5xl font-sans font-bold capitalize w-72 relative'>
               “We can have fun”
             </p>
             <p className='w-80 mt-8 mb-6 mx-auto'>
-            A debut single by Noun 266 availabe in fresh pressed vinyl for you listening pleasure.
+            Noun266's debut single hot off the charts and in fresh-pressed vinyl for your listening pleasure.
             </p>
             <p className='w-80 ml-8 md:ml-0'>
               Single side colored LP, 180g
             </p>
           </div>
-          <Image src='/vinyl.png' width='946' height='418' alt='album' className='relative mt-10 md:mt-0' />
+          <Image src='/vinyl.png' width='940' height='418' alt='album' className='relative mt-10 md:mt-0' />
         </div>
         <div className='bg-gradient-to-b from-[#24202F] to-black w-full h-64 z-10' />
       </div>

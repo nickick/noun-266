@@ -25,13 +25,13 @@ const ShareState = ({
             as="h3"
             className="text-4xl leading-10 font-bold text-white"
           >
-            Come along on our journey!
+            Share and mint!
           </Dialog.Title>
           <div className="mt-6 space-y-4 text-sm">
             <p className='leading-8'>
-              Noun 266 is on a way to becoming the most popular NFT music artist in the world. This is a global takeover.
-              <br />
-              Chainsmokers? Post Malone? It&apos;s time to add a Noun to the headlines. Help to spread the word in order to get the Noun 266 playing on the radio near you.
+              Noun 266 is becoming one of the most spectacular music artist in the world. This is a global takeover.
+              <br /><br />
+              Move over Chainsmokers. It&apos;s time to add a Noun to the headlines. Help to spread the word in order to get Noun 266 playing shows around the world.
             </p>
           </div>
           <button
