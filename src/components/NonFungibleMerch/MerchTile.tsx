@@ -36,7 +36,7 @@ const MerchTile = ({
     }
   }
   return (
-    <div className='flex flex-col space-y-6 mb-6 sm:pb-24' id='merch'>
+    <div className='flex flex-col space-y-6 mb-6 sm:pb-24'>
       <MerchInfo title={title} image={image} price={price} />
       <button className='border border-white w-32 py-4' onClick={onClick}>
         Mint

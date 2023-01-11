@@ -33,10 +33,10 @@ const Header = ({
 
   return (
     <div className={`${borderOnly ? 'absolute' : 'relative'} top-0 w-full font-sans text-white ${borderOnly ? 'border-b' : ''} border-b-gray-400 flex justify-between ${borderOnly ? 'z-10' : 'z-[40]'}`}>
-      <div className="border-r-gray-400 md:border-r font-bold p-6">
+      <div className="border-r-gray-400 md:border-r font-medium p-[2.5rem] text-2xl">
         Noun266
       </div>
-      <div className="flex justify-end items-center font-normal md:space-x-6 p-6" style={{
+      <div className="flex justify-end items-center font-normal md:space-x-6 p-[2.5rem] pr-12" style={{
           opacity: borderOnly ? 0 : 1
         }}>
         <Links className="hidden md:flex space-x-12" />
