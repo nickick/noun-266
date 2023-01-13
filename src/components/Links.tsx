@@ -3,19 +3,15 @@ import React from "react"
 
 const links = [
   {
-    label: 'Album',
-    link: '#album'
-  },
-  {
-    label: 'Watch video',
+    label: 'Official Video',
     link: '#video'
   },
   {
-    label: 'Merch',
+    label: 'Mint Merch',
     link: '#merch'
   },
   {
-    label: 'Bio',
+    label: 'About',
     link: '#bio'
   },
 ]
