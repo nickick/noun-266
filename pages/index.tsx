@@ -68,7 +68,7 @@ const Home: NextPage = () => (
               “We can have fun”
             </p>
             <p className='w-80 mt-8 mb-6 mx-auto'>
-              Noun266's debut single hot off the charts and in fresh-pressed vinyl for your listening pleasure.
+              Noun266&apos;s debut single hot off the charts and in fresh-pressed vinyl for your listening pleasure.
             </p>
             <p className='w-80 ml-8 md:ml-0'>
               Single side colored LP, 180g
