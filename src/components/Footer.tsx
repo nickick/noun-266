@@ -19,8 +19,12 @@ const Footer = () => {
             </div>
             <div className='flex flex-col space-y-4 mb-20 md:mb-0'>
               <p>Made by:</p>
-              <Image src='/icons/curated.svg' width='80' height='16' alt='Curated' />
-              <Image src='/icons/intern-studios.svg' width='128' height='16' alt='Intern Studios'/>
+              <a href='https://curated.xyz' target='_blank' rel="noreferrer" >
+                <Image src='/icons/curated.svg' width='80' height='16' alt='Curated' />
+                </a>
+              <a href='https://twitter.com/richerdIntern' target='_blank' rel="noreferrer" >
+                <Image src='/icons/intern-studios.svg' width='128' height='16' alt='Intern Studios'/>  
+              </a>
             </div>
           </div>
         </div>
