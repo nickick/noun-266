@@ -4,7 +4,7 @@ const Video = () => {
   return (
     <section id='video' className='h-[20rem] sm:h-[40rem] mb-24'>
       <div className='text-[2rem] px-6 md:px-0 md:w-4/5 flex flex-row flex-nowrap mx-auto max-w-screen-xl'>
-        <p className='md:whitespace-nowrap pr-4 w-[40rem]'>
+        <p className='md:whitespace-nowrap pr-4'>
           We Can Have Fun (Official Music Video) {' '}
           <br className='md:hidden'/>
         </p>
