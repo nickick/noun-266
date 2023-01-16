@@ -8,8 +8,9 @@ const NonFungibleMerch = () => {
   return (
     <section id="merch">
       <div className='text-[2rem] px-6 md:px-0 md:w-4/5 flex flex-row flex-nowrap mx-auto max-w-screen-xl'>
-        <p className='md:whitespace-nowrap pr-4 w-[40rem]'>
+        <p className='md:whitespace-nowrap pr-4'>
           Non-fungible merch
+          <br className='md:hidden'/>
         </p>
         <div className='border-white border-b-2 w-full relative bottom-3' />
       </div>
