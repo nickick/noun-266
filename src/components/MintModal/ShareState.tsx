@@ -27,7 +27,7 @@ const ShareState = ({
           >
             Share and mint!
           </Dialog.Title>
-          <div className="mt-6 space-y-4 text-sm">
+          <div className="mt-6 space-y-4">
             <p className='leading-8'>
               Noun 266 is becoming one of the most spectacular music artist in the world. This is a global takeover.
               <br /><br />

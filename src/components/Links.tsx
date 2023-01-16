@@ -3,19 +3,15 @@ import React from "react"
 
 const links = [
   {
-    label: 'Album',
-    link: '#album'
-  },
-  {
-    label: 'Watch video',
+    label: 'Official Video',
     link: '#video'
   },
   {
-    label: 'Merch',
+    label: 'Mint Merch',
     link: '#merch'
   },
   {
-    label: 'Bio',
+    label: 'About',
     link: '#bio'
   },
 ]
@@ -59,16 +55,16 @@ export const SocialLinks = ({
   size?: number
 }) => (
   <div className={className}>
-    <a href='https://twitter.co' target='_blank' rel="noreferrer" >
+    <a href='https://twitter.com/noun_266' target='_blank' rel="noreferrer" >
       <Image src='/icons/twitter.svg' height={size || 24} width={size || 24} alt='Twitter profile' />
     </a>
-    <a href='https://youtube.com' target='_blank' rel="noreferrer" >
+    <a href='https://www.youtube.com/@noun2669' target='_blank' rel="noreferrer" >
       <Image src='/icons/youtube.svg' height={size || 24} width={size || 24} alt='Youtube profile' />
     </a>
-    <a href='https://spotify.com' target='_blank' rel="noreferrer" >
+    <a href='https://open.spotify.com/artist/5ZDuOmknaQDqFO5cUIn9C4?si=p5BghDXiTNOjgL14-8IKGQ' target='_blank' rel="noreferrer" >
       <Image src='/icons/spotify.svg' height={size || 24} width={size || 24} alt='Spotify profile' />
     </a>
-    <a href='https://nouns.xyz' target='_blank' rel="noreferrer" >
+    <a href='https://nouns.wtf/noun/266' target='_blank' rel="noreferrer" >
       <Image src='/icons/noun.svg'    height={size || 24} width={size || 24} alt='Noun profile' />
     </a>
   </div>

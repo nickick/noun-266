@@ -11,7 +11,7 @@ export const MerchInfo = ({
   <>
     <Image src={image} alt={title} width='312' height='312' className='rounded-[40px]' />
     <div>
-      <p className='text-2xl'>{title}</p>
+      <p className='text-2xl font-semibold'>{title}</p>
       <p>{price}</p>
     </div>
   </>
@@ -49,32 +49,32 @@ export default MerchTile;
 
 export const merchTiles = [
   {
-    title: '266 Cereal',
+    title: 'Cereal',
     image: '/tiles/cereal.jpg',
     price: 'Free + gas',
   },
   {
-    title: '266 Unisex T-shirt',
+    title: 'Tee',
     image: '/tiles/shirt.jpg',
     price: 'Free + gas'
   },
   {
-    title: '266 Milk',
+    title: 'Milk',
     image: '/tiles/milk.jpg',
     price: 'Free + gas'
   },
   {
-    title: '266 Vinyl',
+    title: 'Vinyl',
     image: '/tiles/vinyl.jpg',
     price: 'Free + gas'
   },
   {
-    title: '266 Sunglasses',
+    title: 'Sunglasses',
     image: '/tiles/glasses.jpg',
     price: 'Free + gas'
   },
   {
-    title: '266 Single Cassette',
+    title: 'Cassette',
     image: '/tiles/casette.jpg',
     price: 'Free + gas'
   },

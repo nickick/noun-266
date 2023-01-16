@@ -47,13 +47,11 @@ const MintState = ({
           >
             Get ready to mint!
           </Dialog.Title>
-          <div className="mt-6 space-y-4 text-sm">
+          <div className="mt-6 space-y-4">
             <p className='leading-8'>
-              Claim this free NFT as a token of appreciation from Noun 266 (just pay gas!).
-              <br /><br />
-              Take a piece of the show with you, and show everyone just how early you are. Limit 1 per wallet.
-              
-              
+              Take a piece of the show with you. Claim this free NFT as a token of appreciation from Noun 266. Just pay gas!
+              <br/><br/>
+              Limit 1 per wallet, so choose wisely.
             </p>
           </div>
           <TransactionStatus />
