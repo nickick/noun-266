@@ -63,7 +63,7 @@ const Home: NextPage = () => (
       </div>
       <div className='relative -mt-28 z-30'>
         <div className='flex flex-col md:flex-row relative top-12 justify-center' id='album'>
-          <div className='flex flex-col items-centered relative md:left-0 justify-center'>
+          <div className='flex flex-col items-centered relative md:left-10 justify-center'>
             <p className='text-5xl font-sans font-bold capitalize w-72 relative'>
               “We can have fun”
             </p>
@@ -71,7 +71,7 @@ const Home: NextPage = () => (
               Noun266&apos;s debut single hot off the charts and in fresh-pressed vinyl for your listening pleasure.
             </p>
             <p className='w-80 ml-8 md:ml-0'>
-              Single side colored LP, 180g
+              <a href='https://twitter.com/noun_266' className='underline' target='_blank' rel="noreferrer" >Follow Noun 266</a> for updates on your chance to score a physical vinyl!
             </p>
           </div>
           <Image src='/vinyl.png' width='940' height='418' alt='album' className='relative mt-10 md:mt-0' />
