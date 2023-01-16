@@ -15,7 +15,7 @@ const Footer = () => {
           <div className='flex flex-col md:flex-row justify-between md:space-x-10'>
             <div className='flex flex-col'>
               <Links className='flex flex-col space-y-2'/>
-              <SocialLinks className='flex space-x-4 justify-between w-32 mt-4 md:mt-20 mb-6 md:mb-4'/>
+              <SocialLinks className='flex space-x-4 justify-between w-32 mt-4 md:mt-20 mb-6 md:mb-4' size={18} />
             </div>
             <div className='flex flex-col space-y-4 mb-20 md:mb-0'>
               <p>Made by:</p>

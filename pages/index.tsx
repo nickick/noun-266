@@ -20,17 +20,19 @@ const Home: NextPage = () => (
         <div className='relative h-screen'>
           <Image src='/noun-266-dj.webp' alt='Noun 266 person' width='626' height='1112' className='relative mx-auto z-20 object-contain h-[70%] md:h-full transform -translate-y-28 md:-translate-y-32' style={{aspectRatio: '626 / 1112'}}/>
           <div className='absolute h-1/2 w-full mx-auto z-20 top-36 md:top-1/2 bg-gradient-to-b from-transparent via-black to-black' />
-          <div className='absolute h-[100rem] w-4/5 md:w-[100rem] z-0 transform top-0 -translate-x-1/2 left-1/2 -translate-y-72 animate-pulse' style={{
-            background: 'radial-gradient(#5F40B5, #5F40B5, #000, #000, #000)'
-          }} />
+          <div className='absolute overflow-hidden w-full h-[40rem] md:h-[100rem] -top-20'>
+            <div className='absolute h-[40rem] md:h-[100rem] w-[40rem] md:w-[100rem] z-0 transform top-0 -translate-x-1/2 left-1/2 -translate-y-32 md:-translate-y-72 animate-pulse' style={{
+              background: 'radial-gradient(#5F40B5, #5F40B5, #000, #000, #000)'
+            }} />
+          </div>
         </div>
-        <div className='absolute top-0 md:top-1/2 z-20 left-12'>
+        <div className='absolute top-[18rem] md:top-1/2 z-20 left-8 md:left-12'>
           <div className='relative'>
             <h1 className='text-5xl leading-snug md:text-8xl font-bold'>
               <span>
                 New
                 <button className='px-10 md:px-12 mx-4 bg-[#5f40b5] rounded-full relative top-4'>
-                  <div className='w-14'>
+                  <div className='w-8 md:w-14'>
                     <Image src='/noun-266.webp' alt='Noun 266 button' width="80" height="120" className='w-full relative'/>
                   </div>
                 </button>
@@ -42,12 +44,10 @@ const Home: NextPage = () => (
                 Available
                 <br className='md:hidden' />
                 <div className='flex'>
-                  <button className='px-12 md:mx-4 mr-4 md:mr-4 h-[5.5rem] border border-white rounded-full relative flex justify-center items-center bg-black'>
-                    <Image src='/play-button.svg' alt='Noun 266 button' height='32' width='32' className='absolute h-8 w-8 top-1/2 left-9 transform -translate-y-1/2' />
+                  <button className='px-6 md:px-12 md:mx-4 mr-4 md:mr-4 h-[3.5rem] md:h-[5.5rem] border border-white rounded-full relative flex justify-center items-center bg-black'>
+                    <Image src='/play-button.svg' alt='Noun 266 button' height='32' width='32' className='absolute h-4 md:h-8 w-4 md:w-8 top-1/2 left-4 md:left-9 transform -translate-y-1/2' />
                     &nbsp;
-                    <span className='text-white font-semi-bold relative left-3' style={{
-                      fontSize: '2rem',
-                    }}>
+                    <span className='text-white font-semi-bold relative left-3 text-xl md:text-5xl'>
                       Play
                     </span>
                   </button>
@@ -68,7 +68,7 @@ const Home: NextPage = () => (
               “We can have fun”
             </p>
             <p className='w-80 mt-8 mb-6 mx-auto'>
-            Noun266's debut single hot off the charts and in fresh-pressed vinyl for your listening pleasure.
+              Noun266's debut single hot off the charts and in fresh-pressed vinyl for your listening pleasure.
             </p>
             <p className='w-80 ml-8 md:ml-0'>
               Single side colored LP, 180g

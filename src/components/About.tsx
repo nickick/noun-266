@@ -9,12 +9,15 @@ const About = () => {
           Noun 266
         </h3>
         <p className='text-base leading-8'>
-          Born '266' on April 7th, 2022 to the Nouns family, Noun 266 was destined for music greatness. With his signature Chart Head and clean aesthetics, he found his calling collaborating with Richerd Intern in late 2022. Now having performed on national television as a world-renowned DJ, Noun 266 is ready to take the world by storm with his debut single, "We Can Have Fun".
+          Born &apos;266&apos; on <a href='https://linktosomewhere.com' className='underline' target='_blank' rel="noreferrer" >April 7th, 2022</a> to the Nouns family, Noun 266 was destined for music greatness. With his signature Chart Head and clean aesthetics, he found his calling collaborating with Richerd Intern in late 2022. Now having performed on national television as a world-renowned DJ, Noun 266 is ready to take the world by storm with his debut single, &quot;We Can Have Fun&quot;.
         </p>
       </div>
-      <div className='absolute -top-40 md:-top-20 md:right-0 md:bottom-0'>
-        <Image src='/nouns-dj-cropped.png' alt='Noun 266 person' width='642' height='656' />
-        <div className='absolute h-[20rem] w-full mx-auto z-20 top-36 md:top-1/2 bg-gradient-to-b from-transparent via-black to-black md:hidden' />
+      <Image src='/nouns-dj-cropped.png' alt='Noun 266 person' width='642' height='656' className='absolute bottom-[75%] md:bottom-0 md:-right-20 z-10'/>
+      <div className='absolute h-[10rem] bottom-[65%] w-full left-0 mx-auto z-20 md:top-1/2 bg-gradient-to-b from-transparent via-black to-black md:hidden' />
+      <div className='absolute overflow-hidden w-full h-full z-0 top-0 right-0 rounded-[40px] hidden md:block'>
+        <div className='absolute w-[80rem] h-[80rem] -top-20 -right-[50%]' style={{
+          background: 'radial-gradient(#5F40B5, #5F40B5, #000, #000, #000)'
+        }} />
       </div>
     </div>
   )

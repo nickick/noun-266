@@ -59,9 +59,17 @@ export const SocialLinks = ({
   size?: number
 }) => (
   <div className={className}>
-    <Image src='/icons/twitter.svg' height={size || 24} width={size || 24} alt='Twitter profile' />
-    <Image src='/icons/youtube.svg' height={size || 24} width={size || 24} alt='Youtube profile' />
-    <Image src='/icons/spotify.svg' height={size || 24} width={size || 24} alt='Spotify profile' />
-    <Image src='/icons/noun.svg'    height={size || 24} width={size || 24} alt='Noun profile' />
+    <a href='https://twitter.co' target='_blank' rel="noreferrer" >
+      <Image src='/icons/twitter.svg' height={size || 24} width={size || 24} alt='Twitter profile' />
+    </a>
+    <a href='https://youtube.com' target='_blank' rel="noreferrer" >
+      <Image src='/icons/youtube.svg' height={size || 24} width={size || 24} alt='Youtube profile' />
+    </a>
+    <a href='https://spotify.com' target='_blank' rel="noreferrer" >
+      <Image src='/icons/spotify.svg' height={size || 24} width={size || 24} alt='Spotify profile' />
+    </a>
+    <a href='https://nouns.xyz' target='_blank' rel="noreferrer" >
+      <Image src='/icons/noun.svg'    height={size || 24} width={size || 24} alt='Noun profile' />
+    </a>
   </div>
 )
