@@ -1,11 +1,13 @@
+import { ethers } from 'ethers'
 import React, { useContext } from 'react'
 import { ContractContext } from '../ContractContext'
 import shortenAddress from '../utils/shortenAddress'
 import Loading from './Loading'
+import abi from '../ContractContext/contractAbi.json'
 
 const TransactionStatus = () => {
   const { transactionHash, transactionResult } = useContext(ContractContext)
-  const token = transactionResult?.events?.map((event) => (parseInt(event.topics[3], 16)))[0];
+  const token = parseInt(((transactionResult?.events || [{}])[0].data || [{}]).slice(0,66) as string, 16)
 
   return (
     <div>
