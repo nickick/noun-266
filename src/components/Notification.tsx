@@ -66,9 +66,9 @@ const Notification = () => {
   const open = Boolean(errorMessage && !!errorMessage.length);
 
   return (
-    <div className={`bg-indigo-900 text-center py-4 lg:px-4 ${errorMessage ? 'relative z-[1000] w-full top-4 left-0' : 'hidden'}`} onClick={handleClose}>
-      <div className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-        <span className="font-semibold mr-2 text-left flex-auto max-w-3xl whitespace-nowrap text-ellipsis overflow-hidden block">
+    <div className={`text-center py-4 lg:px-4 ${errorMessage ? 'relative z-[1000] w-full top-4 left-0' : 'hidden'}`} onClick={handleClose}>
+      <div className="py-2 px-5 bg-red-900 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex border-red-300 border" role="alert">
+        <span className="mr-2 text-left flex-auto max-w-3xl whitespace-nowrap text-ellipsis overflow-hidden block">
           {message.text}
         </span>
       </div>
