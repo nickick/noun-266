@@ -68,7 +68,7 @@ const Notification = () => {
   return (
     <div className={`bg-indigo-900 text-center py-4 lg:px-4 ${errorMessage ? 'relative z-[1000] w-full top-4 left-0' : 'hidden'}`} onClick={handleClose}>
       <div className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-        <span className="font-semibold mr-2 text-left flex-auto">
+        <span className="font-semibold mr-2 text-left flex-auto max-w-3xl whitespace-nowrap text-ellipsis overflow-hidden block">
           {message.text}
         </span>
       </div>
