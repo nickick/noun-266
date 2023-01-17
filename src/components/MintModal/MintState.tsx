@@ -3,6 +3,7 @@ import Image from 'next/future/image';
 import Link from 'next/link';
 import { useContext, useRef, useState } from 'react';
 import { ContractContext } from '../ContractContext';
+import TermsAndConditions from './TermsAndConditions';
 import TransactionStatus from './TransactionStatus';
 
 const MintState = ({
@@ -24,17 +25,20 @@ const MintState = ({
     currentAccount, connectWallet, mintPublic
   } = useContext(ContractContext)
 
+  const [termsAccepted, setTermsAccepted] = useState(false)
+
+  const handleCheck = () => {
+    setChecked(!checked)
+  }
+
   const onClick = () => {
     if (currentAccount && selectedMerchTile !== undefined) {
+      setTermsAccepted(true);
       // selectedMerchTile is 0 index but NFTs are indexed starting at 1
       mintPublic(selectedMerchTile + 1);
     } else {
       connectWallet();
     }
-  }
-
-  const handleCheck = () => {
-    setChecked(!checked)
   }
 
   return (
@@ -63,17 +67,8 @@ const MintState = ({
               <p className='text-2xl'>{merchTile.title}</p>
               <p>{merchTile.price}</p>
             </div>
-            {
-              currentAccount && (
-              <label className='block my-2'>
-                <input type="checkbox" checked={checked} onChange={handleCheck} className='mr-2' />
-                I agree to the <span className='underline'><Link href='/terms'>Terms and Conditions</Link></span>.
-              </label>
-              )
-            }
             <button
               type="button"
-              disabled={currentAccount && !checked}
               className="mt-3 inline-flex justify-center border border-gray-300 px-8 py-2 text-base font-medium shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-6 sm:w-auto sm:text-sm disabled:cursor-not-allowed"
               onClick={onClick}
               ref={cancelButtonRef}

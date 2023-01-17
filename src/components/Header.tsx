@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ConnectButton from "./ConnectButton";
 import Links from "./Links";
 
 type HeaderProps = {
@@ -40,6 +41,7 @@ const Header = ({
           opacity: borderOnly ? 0 : 1
         }}>
         <Links className="hidden md:flex space-x-12" />
+        <ConnectButton />
         <div className="block md:hidden">
           <Hamburger open={open} setOpen={setOpen} />
         </div>
@@ -58,6 +60,7 @@ const Header = ({
             <div className="flex flex-col justify-start align-middle h-full">
               <div onClick={() => setOpen(false)}>
                 <Links className="flex flex-col items-center mt-12 text-3xl space-y-4" />
+                <ConnectButton />
               </div>
             </div>
           </div>

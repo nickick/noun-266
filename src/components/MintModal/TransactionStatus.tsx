@@ -8,10 +8,10 @@ const TransactionStatus = () => {
   const token = transactionResult?.events?.map((event) => (parseInt(event.topics[3], 16)))[0];
 
   return (
-    <div className='my-10'>
+    <div>
       {
         (transactionHash || transactionResult) && (
-          <div>
+          <div className='my-10'>
             {transactionHash && (
               <div className='flex items-center space-x-4'>
                 Transaction:

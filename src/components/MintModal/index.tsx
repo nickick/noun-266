@@ -6,6 +6,8 @@ import { merchTiles } from '../NonFungibleMerch/MerchTile';
 import Notification from '../Notification';
 import MintState from './MintState';
 import ShareState from './ShareState';
+import TermsState from './TermsState';
+
 
 export default function MintModal({
   setOpen,
@@ -29,6 +31,17 @@ export default function MintModal({
   }
 
   const merchTile = merchTiles[selectedMerchTile || 0]
+
+  const getDialogStep = (step: number) => {
+    switch (step) {
+      case (0):
+        return <ShareState merchTile={merchTile} selectedMerchTile={selectedMerchTile} setDialogStep={setDialogStep} />
+      case (1):
+        return <TermsState setDialogStep={setDialogStep} />
+      case (2):
+        return <MintState merchTile={merchTile} selectedMerchTile={selectedMerchTile} />
+    }
+  }
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -67,13 +80,7 @@ export default function MintModal({
                   <Image src='/icons/close.svg' height='30' width='30' alt='close' />
                 </div>
                 <Dialog.Panel className="relative sm:w-[64rem] transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:max-w-4xl text-white border border-white backdrop-blur-md">
-                  {
-                    dialogStep === 0 ? (
-                      <ShareState merchTile={merchTile} selectedMerchTile={selectedMerchTile} setDialogStep={setDialogStep} />
-                    ) : (
-                      <MintState merchTile={merchTile} selectedMerchTile={selectedMerchTile} />
-                    )
-                  }
+                  {getDialogStep(dialogStep)}
                 </Dialog.Panel>
               </div>
             </Transition.Child>
