@@ -19,7 +19,7 @@ const SwitchNetwork = () => {
 
   return (
     <div className={`bg-indigo-900 text-center py-4 lg:px-4 z-[1000] w-full top-0 left-0`} onClick={handleClose}>
-      <div className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+      <div className="p-2 px-4 bg-indigo-900 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
         {switchNetwork && (
           <span className="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Switch Network</span>
         )}

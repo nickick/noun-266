@@ -33,7 +33,7 @@ const Header = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={`${borderOnly ? 'absolute' : 'relative'} top-0 w-full font-sans text-white border-b border-b-gray-400 flex justify-between z-10`}>
+    <div className={`${borderOnly ? 'absolute' : 'relative'} top-0 w-full font-sans text-white flex justify-between z-50`}>
       <div className="border-r-gray-400 md:border-r font-medium p-[2.5rem] text-2xl">
         Noun266
       </div>
@@ -41,8 +41,10 @@ const Header = ({
           opacity: borderOnly ? 0 : 1
         }}>
         <Links className="hidden md:flex space-x-12" />
-        <ConnectButton />
-        <div className="block md:hidden">
+        <div className="hidden sm:flex">
+          <ConnectButton />
+        </div>
+        <div className="block sm:hidden relative z-1000">
           <Hamburger open={open} setOpen={setOpen} />
         </div>
         {/* hamburger menu */}

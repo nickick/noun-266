@@ -22,9 +22,10 @@ const Home: NextPage = () => {
       <main className='bg-black w-full h-full min-h-screen text-white'>
         <div className='relative max-w-screen-2xl mx-auto'>
           <div className='relative h-screen'>
+            <div className='border-t border-t-gray-400 z-10 absolute w-full' />
             <Image src='/noun-266-dj.webp' alt='Noun 266 person' width='626' height='1112' className='relative mx-auto z-20 object-contain h-[70%] md:h-full transform -translate-y-28 md:-translate-y-32' style={{aspectRatio: '626 / 1112'}}/>
             <div className='absolute h-1/2 w-full mx-auto z-20 top-36 md:top-1/2 bg-gradient-to-b from-transparent via-black to-black' />
-            <div className='absolute overflow-hidden w-full h-[40rem] md:h-[100rem] -top-20'>
+            <div className='absolute overflow-hidden w-full h-[40rem] md:h-[100rem] -top-20 z-0'>
               <div className='absolute h-[40rem] md:h-[100rem] w-[40rem] md:w-[100rem] z-0 transform top-0 -translate-x-1/2 left-1/2 -translate-y-32 md:-translate-y-72 animate-pulse' style={{
                 background: 'radial-gradient(#5F40B5, #5F40B5, #000, #000, #000)'
               }} />
@@ -68,7 +69,7 @@ const Home: NextPage = () => {
         <div className='relative -mt-28 z-30 bg-black'>
           <div className='flex flex-col md:flex-row relative top-12 justify-center' id='album'>
             <div className='flex flex-col items-centered relative md:left-0 justify-center'>
-              <p className='text-5xl font-sans font-bold capitalize w-72 relative'>
+              <p className='text-5xl font-sans font-bold capitalize w-72 relative ml-10 sm:ml-0'>
                 “We can have fun”
               </p>
               <p className='w-80 mt-8 mb-6 mx-auto'>
