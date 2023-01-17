@@ -14,7 +14,6 @@ const Layout = ({
     <>
       <SwitchNetwork />
       <Header />
-      <Header borderOnly />
       <SocialBar />
       {children}
       <Footer />

@@ -33,7 +33,7 @@ const Header = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={`${borderOnly ? 'absolute' : 'relative'} top-0 w-full font-sans text-white ${borderOnly ? 'border-b' : ''} border-b-gray-400 flex justify-between ${borderOnly ? 'z-10' : 'z-[40]'}`}>
+    <div className={`${borderOnly ? 'absolute' : 'relative'} top-0 w-full font-sans text-white border-b border-b-gray-400 flex justify-between z-10`}>
       <div className="border-r-gray-400 md:border-r font-medium p-[2.5rem] text-2xl">
         Noun266
       </div>
