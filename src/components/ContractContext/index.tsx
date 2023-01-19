@@ -131,7 +131,7 @@ const ContractContextProvider = ({
   }
 
   const checkDebugChain = async () => {
-    window.debug = Boolean(process.env.NEXT_PUBLIC_DEBUG || 'true');
+    window.debugMode = Boolean(process.env.NEXT_PUBLIC_DEBUG || 'true');
     const provider = await getProvider();
     const { chainId: chainIdDetected } = await provider?.getNetwork() || {};
     setChainId(chainIdDetected);

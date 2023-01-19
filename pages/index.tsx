@@ -20,9 +20,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='bg-black w-full h-full min-h-screen text-white'>
+        <div className='border-t border-t-gray-400 z-10 absolute w-screen left-0' />
         <div className='relative max-w-screen-2xl mx-auto'>
           <div className='relative h-screen'>
-            <div className='border-t border-t-gray-400 z-10 absolute w-full' />
             <Image src='/noun-266-dj.webp' alt='Noun 266 person' width='626' height='1112' className='relative mx-auto z-20 object-contain h-[70%] md:h-full transform -translate-y-28 md:-translate-y-32' style={{aspectRatio: '626 / 1112'}}/>
             <div className='absolute h-1/2 w-full mx-auto z-20 top-36 md:top-1/2 bg-gradient-to-b from-transparent via-black to-black' />
             <div className='absolute overflow-hidden w-full h-[40rem] md:h-[100rem] -top-20 z-0'>

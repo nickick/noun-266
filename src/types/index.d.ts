@@ -5,6 +5,6 @@ declare global {
   interface Window {
     // eslint-disable-next-line no-undef
     ethereum: ExternalProvider;
-    debug: boolean;
+    debugMode: boolean;
   }
 }
