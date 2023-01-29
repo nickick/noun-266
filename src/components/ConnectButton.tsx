@@ -14,7 +14,7 @@ const ConnectButton = () => {
   return (
     <div
       onClick={connectWallet}
-      className="border rounded-2xl w-1/2 sm:w-full mx-auto my-6 sm:my-0 border-white px-4 cursor-pointer text-center"
+      className="rounded-2xl w-1/2 sm:w-full mx-auto my-6 sm:my-0 px-6 py-2 sm:py-0 cursor-pointer text-center bg-[#DF30A8]"
     >
       {!currentAccount
         ? 'Connect'

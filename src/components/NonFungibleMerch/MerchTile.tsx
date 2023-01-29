@@ -9,7 +9,7 @@ export const MerchInfo = ({
   price: string,
 }) => (
   <>
-    <Image src={image} alt={title} width='312' height='312' className='rounded-[15px]' />
+    <video src={image} width='312' height='312' className='rounded-[15px]' autoPlay loop muted />
     <div>
       <p className='text-2xl font-semibold'>{title}</p>
     </div>
@@ -37,7 +37,7 @@ const MerchTile = ({
   return (
     <div className='flex flex-col space-y-6 mb-6 sm:pb-24'>
       <MerchInfo title={title} image={image} price={price} />
-      <button className='border border-white w-full sm:w-32 py-4' onClick={onClick}>
+      <button className='bg-[#DF30A8] w-full sm:w-32 py-4 rounded-lg' onClick={onClick}>
         Mint
       </button>
     </div>
@@ -49,32 +49,32 @@ export default MerchTile;
 export const merchTiles = [
   {
     title: 'Cereal',
-    image: '/tiles/cereal.jpg',
+    image: '/tiles/cereal.mov',
     price: 'Free (just pay gas)',
   },
   {
     title: 'Tee',
-    image: '/tiles/shirt.jpg',
+    image: '/tiles/shirt.mov',
     price: 'Free (just pay gas)'
   },
   {
     title: 'Milk',
-    image: '/tiles/milk.jpg',
+    image: '/tiles/milk.mov',
     price: 'Free (just pay gas)'
   },
   {
     title: 'Vinyl',
-    image: '/tiles/vinyl.jpg',
+    image: '/tiles/vinyl.mov',
     price: 'Free (just pay gas)'
   },
   {
     title: 'Sunglasses',
-    image: '/tiles/glasses.jpg',
+    image: '/tiles/glasses.mov',
     price: 'Free (just pay gas)'
   },
   {
     title: 'Cassette',
-    image: '/tiles/cassette.jpg',
+    image: '/tiles/cassette.mov',
     price: 'Free (just pay gas)'
   },
 ]
