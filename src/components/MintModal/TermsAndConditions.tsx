@@ -26,7 +26,7 @@ Test to see if import works as expected!
 const TermsAndConditions = () => {
   return (
     <div className='bg-white mt-6 w-full'>
-      <div className='overflow-scroll text-black max-h-[10rem] md:max-h-[20rem] p-4'>
+      <div className='overflow-scroll text-black max-h-[20rem] md:max-h-[20rem] p-4'>
         <ReactMarkdown>
           {TermsAndConditionText}
         </ReactMarkdown>

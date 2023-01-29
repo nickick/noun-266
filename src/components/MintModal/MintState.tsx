@@ -42,30 +42,30 @@ const MintState = ({
   }
 
   return (
-    <div className="bg-[rgba(26,0,2,0.6)] p-4 sm:p-8 sm:pb-12">
+    <div className="bg-[rgba(26,0,2,0.6)] p-4 py-8 sm:p-12 sm:py-8 sm:pb-12">
       <div className="sm:flex sm:items-start sm:justify-between relative">
-        <div className="sm:mt-0 sm:ml-4 sm:text-left sm:w-1/2">
+        <div className="sm:mt-0 sm:text-left sm:w-1/2">
           <Dialog.Title
             as="h3"
             className="text-4xl leading-10 font-bold text-white"
           >
             Time to mint
           </Dialog.Title>
-          <video width='312' height='312' className='rounded-[15px] mt-10' autoPlay loop muted playsInline>
+          <video width='312' height='312' className='rounded-[15px] w-48 sm:w-full mx-auto mt-10' autoPlay loop muted playsInline>
             <source src={`${merchTile.image}.mp4`} type="video/mp4" />
             <source src={`${merchTile.image}.webm`} type="video/webm" />
           </video>
           <TransactionStatus />
         </div>
         {(selectedMerchTile !== undefined && merchTile) && (
-          <div className='space-y-6 text-center flex flex-col items-center justify-center absolute right-0 h-full w-1/2 flex-1'>
+          <div className='space-y-6 text-center flex flex-col items-center justify-center sm:absolute sm:-right-6 h-full sm:w-1/2 flex-1 my-4 mt-12 sm:mt-0'>
             <div className='space-y-2'>
               <p className='text-2xl'>{merchTile.title}</p>
               <p className='text-sm'>{merchTile.price}</p>
             </div>
             <button
               type="button"
-              className="mt-3 inline-flex justify-center py-4 rounded-md text-base font-medium shadow-sm bg-[#Df30A8] hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-6 sm:w-44 sm:text-sm disabled:cursor-not-allowed"
+              className="mt-3 inline-flex justify-center py-4 rounded-md text-base font-medium shadow-sm bg-[#Df30A8] hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-6 w-full sm:w-44 sm:text-sm disabled:cursor-not-allowed"
               onClick={onClick}
               ref={cancelButtonRef}
             >
