@@ -102,7 +102,7 @@ const ContractContextProvider = ({
     try {
       if (!ethereum) {
         if (window.innerWidth < 800) {
-          window.location.replace('https://noun266.xys');
+          window.location.replace(process.env.NEXT_PUBLIC_HOSTNAME || '');
         }
       }
 
