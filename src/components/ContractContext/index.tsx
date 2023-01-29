@@ -102,7 +102,7 @@ const ContractContextProvider = ({
     try {
       if (!ethereum) {
         if (window.innerWidth < 800) {
-          window.location.replace(process.env.NEXT_PUBLIC_HOSTNAME || '');
+          window.location.replace(`https://metamask.app.link/dapp/${process.env.NEXT_PUBLIC_HOSTNAME}`);
         }
       }
 
