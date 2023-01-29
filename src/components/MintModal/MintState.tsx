@@ -42,7 +42,7 @@ const MintState = ({
   }
 
   return (
-    <div className="bg-[rgba(26,0,2,0.6)] px-4 pt-4 pb-4 sm:p-16 sm:pb-12">
+    <div className="bg-[rgba(26,0,2,0.6)] p-4 sm:p-8 sm:pb-12">
       <div className="sm:flex sm:items-start sm:justify-between relative">
         <div className="sm:mt-0 sm:ml-4 sm:text-left sm:w-1/2">
           <Dialog.Title

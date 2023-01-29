@@ -7,8 +7,8 @@ const TermsState = ({
   setDialogStep: Dispatch<SetStateAction<number>>,
 }) => {
   return (
-    <div className='bg-[rgba(26,0,2,0.6)] px-4 pb-4 sm:p-16 sm:pt-12 sm:pb-12'>
-      Terms and Conditions
+    <div className='bg-[rgba(26,0,2,0.6)] px-4 pb-4 sm:p-10 sm:py-8'>
+      <h2 className='text-3xl'>Terms and Conditions</h2>
       <TermsAndConditions />
       <div className='flex justify-end mt-2 sm:mt-0'>
         <button
