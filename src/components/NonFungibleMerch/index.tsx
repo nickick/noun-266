@@ -7,12 +7,14 @@ const NonFungibleMerch = () => {
 
   return (
     <section id="merch">
-      <div className='text-[2rem] px-6 md:px-0 md:w-4/5 flex flex-row flex-nowrap mx-auto max-w-screen-xl'>
+      <div className='text-[2rem] px-6 md:px-0 md:w-4/5 flex flex-row flex-nowrap mx-auto max-w-screen-xl border-white border-b'>
         <p className='md:whitespace-nowrap pr-4'>
-          Non-fungible merch
+          Noun266 Merch
           <br className='md:hidden'/>
         </p>
-        <div className='border-white border-b-2 w-full relative bottom-3' />
+      </div>
+      <div className='text-lg py-2 max-w-screen-xl mx-auto'>
+        All merch is free (just pay gas)
       </div>
       <div className='flex flex-col items-center md:w-2/3 md:grid md:grid-cols-3 gap-4 mx-auto mt-12 max-w-screen-lg'>
         {merchTiles.map((tile, index) => (

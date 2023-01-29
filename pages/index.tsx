@@ -31,25 +31,18 @@ const Home: NextPage = () => {
               }} />
             </div>
           </div>
-          <div className='absolute top-[18rem] md:top-1/2 z-20 left-8 md:left-12'>
+          <div className='absolute top-[18rem] md:top-1/2 z-20 sm:left-8 md:left-12 w-full p-8 md:p-0'>
             <div className='relative'>
               <h1 className='text-5xl leading-snug md:text-8xl font-bold'>
                 <span>
-                  New
-                  <button className='px-10 md:px-12 mx-4 bg-[#5f40b5] rounded-full relative top-4'>
-                    <div className='w-8 md:w-14'>
-                      <Image src='/noun-266.webp' alt='Noun 266 button' width="80" height="120" className='w-full relative'/>
-                    </div>
-                  </button>
-                  <br className='md:hidden' />
-                  Single
+                  New Single
                 </span>
                 <br />
                 <span className='md:flex'>
                   Available
                   <br className='md:hidden' />
                   <div className='flex'>
-                    <button className='px-6 md:px-12 md:mx-4 mr-4 md:mr-4 h-[3.5rem] md:h-[5.5rem] border border-white rounded-full relative flex justify-center items-center bg-black' onClick={() => setOpen(true)}>
+                    <button className='px-6 pr-7 md:px-12 md:pr-12 md:mx-4 mr-4 md:mr-4 h-[3.5rem] md:h-[5.5rem] border border-white rounded-full relative hidden sm:flex justify-center items-center bg-[#DF30A8]' onClick={() => setOpen(true)}>
                       <Image src='/play-button.svg' alt='Noun 266 button' height='32' width='32' className='absolute h-4 md:h-8 w-4 md:w-8 top-1/2 left-4 md:left-9 transform -translate-y-1/2' />
                       &nbsp;
                       <span className='text-white font-semi-bold relative left-3 text-xl md:text-5xl'>
@@ -60,6 +53,13 @@ const Home: NextPage = () => {
                       Now
                     </span>
                   </div>
+                  <button className='w-full h-[3.5rem] border border-white rounded-full relative flex sm:hidden justify-center items-center bg-[#DF30A8] mt-4' onClick={() => setOpen(true)}>
+                    <Image src='/play-button.svg' alt='Noun 266 button' height='32' width='32' className='relative h-4 w-4 left-4' />
+                    &nbsp;
+                    <span className='text-white font-semi-bold relative left-3 text-xl md:text-5xl'>
+                      Play
+                    </span>
+                  </button>
                 </span>
               </h1>
             </div>

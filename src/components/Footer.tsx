@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className='relative'>
       <div className='w-4/5 mx-auto pt-24 relative max-w-screen-xl'>
-        <Image src='/noun-266.webp' height='60' width='96' alt='Noun 266' className='absolute md:hidden right-0 top-8 md:top-48 md:bottom-0 md:left-0 md:h-24 w-[60px]'/>
-        <Image src='/noun-266.webp' height='60' width='96' alt='Noun 266' className='absolute hidden md:block md:bottom-0 md:left-0 md:h-24 w-[60px]'/>
+        <Image src='/noun266.svg' height='360' width='360' alt='Noun 266' className='absolute md:hidden right-0 bottom-0 md:top-48 md:bottom-0 md:left-0 md:h-24 w-24'/>
+        <Image src='/noun266.svg' height='360' width='360' alt='Noun 266' className='absolute hidden md:block md:bottom-0 md:left-0 md:h-24 w-24'/>
         <div className='flex flex-col md:flex-row justify-between'>
           <p className='text-[2rem]'>
             Noun266
@@ -23,7 +23,7 @@ const Footer = () => {
                 <Image src='/icons/curated.svg' width='80' height='16' alt='Curated' />
                 </a>
               <a href='https://twitter.com/richerdIntern' target='_blank' rel="noreferrer" >
-                <Image src='/icons/intern-studios.svg' width='128' height='16' alt='Intern Studios'/>  
+                <Image src='/icons/intern-studios.svg' width='128' height='16' alt='Intern Studios' className='pt-2'/>
               </a>
             </div>
           </div>

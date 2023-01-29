@@ -23,12 +23,12 @@ const SwitchNetwork = () => {
         {switchNetwork && (
           <span className="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Switch Network</span>
         )}
-        <span className="font-semibold mr-2 text-left flex-auto">
+        <span className="font-semibold mr-2 text-left flex-auto text-sm md:text-md">
           {isDebug() && switchNetwork ?
             isDebug()
               ? 'Switch to Goerli for debugging'
               : 'Detected test network, switch to Ethereum Mainnet to migrate'
-            : 'Available for a limited time only! Until 11:59:59 PM 1/30/23.'
+            : 'Merch only available for a limited time! Until 11:59:59 PM 1/30/23.'
           }
         </span>
       </div>

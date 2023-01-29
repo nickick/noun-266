@@ -3,8 +3,6 @@ import Image from 'next/future/image';
 import { Dispatch, SetStateAction, useRef } from 'react';
 
 const ShareState = ({
-  merchTile,
-  selectedMerchTile,
   setDialogStep,
 }: {
   merchTile?: {
@@ -25,29 +23,34 @@ const ShareState = ({
             as="h3"
             className="text-4xl leading-10 font-bold text-white"
           >
-            Share and mint!
+            Collect Noun266 Merch
           </Dialog.Title>
           <div className="mt-6 space-y-4">
             <p className='leading-8'>
-              Noun 266 is becoming one of the most spectacular music artist in the world. This is a global takeover.
+              Add limited edition Noun266 merch to your personal collection. It&apos;s completely free (just pay gas).
               <br /><br />
-              Move over Chainsmokers. It&apos;s time to add a Noun to the headlines. Help to spread the word in order to get Noun 266 playing shows around the world.
+              Before you mint it, Noun266 would greatly appreciate your help in spreading the word on Twitter so he can play more shows around the world.
             </p>
           </div>
-          <div className='flex sm:flex-row justify-between'>
-            <p className='underline cursor-pointer mt-6 mb-6 sm:mb-0' onClick={() => setDialogStep(1)}>
-              No sharing, I just want the free mint
-            </p>
+          <div className='flex sm:flex-row justify-end space-x-4 mt-10 sm:mt-10'>
             <button
               type="button"
-              className="mt-3 inline-flex justify-center border border-gray-300 bg-white px-8 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-6 sm:w-auto sm:text-sm"
+              className="mt-3 inline-flex justify-center border rounded-md border-[#DF30A8] bg-transparent py-4 text-base font-medium text-[#DF30A8] shadow-sm hover:opacity-80 focus:outline-none sm:mt-6 w-44 sm:text-sm"
+              onClick={() => {setDialogStep(1)}}
+              ref={cancelButtonRef}
+            >
+              Just mint it
+            </button>
+            <button
+              type="button"
+              className="mt-3 inline-flex justify-center border rounded-md border-[#DF30A8] bg-[#DF30A8] py-4 text-base font-medium text-white shadow-sm hover:opacity-80 focus:outline-none sm:mt-6 w-44 sm:text-sm"
               onClick={() => {
                 setDialogStep(1)
                 window.open('https://twitter.com/share?text=DJ%20%40Noun_266%20just%20dropped%20his%20latest%20single%21', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
               }}
               ref={cancelButtonRef}
             >
-              Share tweet
+              Share the news
             </button>
           </div>
         </div>

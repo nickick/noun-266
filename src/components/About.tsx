@@ -9,7 +9,7 @@ const About = () => {
           Noun 266
         </h3>
         <p className='text-base leading-8'>
-          Born &apos;266&apos; on <a href='https://linktosomewhere.com' className='underline' target='_blank' rel="noreferrer" >April 7th, 2022</a> to the Nouns family, Noun 266 was destined for music greatness. With his signature Chart Head and clean aesthetics, he found his calling collaborating with Richerd Intern in late 2022. Now having performed on national television as a world-renowned DJ, Noun 266 is ready to take the world by storm with his debut single, &quot;We Can Have Fun&quot;.
+          Born &apos;266&apos; on <a href='https://linktosomewhere.com' className='underline' target='_blank' rel="noreferrer" >April 7th, 2022</a> to the Nouns family, Noun 266 was destined for music greatness. With his signature Chart Head and clean aesthetics, he found his calling collaborating with Richerd Intern in late 2022. Having performed on national television as a world-renowned DJ, Noun 266 is ready to take the world by storm with his debut single, &quot;We Can Have Fun&quot;.
         </p>
       </div>
       <Image src='/nouns-dj-cropped.png' alt='Noun 266 person' width='642' height='656' className='absolute bottom-[75%] md:bottom-0 md:-right-20 z-10'/>
