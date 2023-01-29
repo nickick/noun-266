@@ -51,7 +51,10 @@ const MintState = ({
           >
             Time to mint
           </Dialog.Title>
-          <video src={merchTile.image} width='312' height='312' className='rounded-[15px] mt-10' autoPlay loop muted />
+          <video width='312' height='312' className='rounded-[15px] mt-10' autoPlay loop muted playsInline>
+            <source src={`${merchTile.image}.mp4`} type="video/mp4" />
+            <source src={`${merchTile.image}.webm`} type="video/webm" />
+          </video>
           <TransactionStatus />
         </div>
         {(selectedMerchTile !== undefined && merchTile) && (
