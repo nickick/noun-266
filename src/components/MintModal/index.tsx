@@ -64,7 +64,7 @@ export default function MintModal({
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 w-full">
+          <div className="flex min-h-full justify-center p-4 text-center items-center sm:p-0">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -79,7 +79,7 @@ export default function MintModal({
                 <div className='absolute top-2 right-2 sm:-top-4 sm:-right-12 text-white z-50'>
                   <Image src='/icons/close.svg' height='30' width='30' alt='close' className='cursor-pointer' />
                 </div>
-                <Dialog.Panel className="relative sm:w-[64rem] transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:max-w-4xl text-white border border-[#DF30A8] backdrop-blur-md">
+                <Dialog.Panel className="relative w-[90%] mx-auto sm:w-[64rem] transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:max-w-4xl text-white border border-[#DF30A8] backdrop-blur-md">
                   {getDialogStep(dialogStep)}
                 </Dialog.Panel>
               </div>
