@@ -13,7 +13,7 @@ const NonFungibleMerch = () => {
           <br className='md:hidden'/>
         </p>
       </div>
-      <div className='text-lg py-2 max-w-screen-xl mx-auto pl-6 sm:pl-0'>
+      <div className='text-lg py-2 max-w-screen-xl mx-auto pl-6 sm:pl-0 md:w-4/5'>
         All merch is free (just pay gas)
       </div>
       <div className='flex flex-col items-center md:w-2/3 md:grid md:grid-cols-3 gap-4 mx-auto mt-12 max-w-screen-lg'>
