@@ -9,12 +9,12 @@ const NonFungibleMerch = () => {
     <section id="merch">
       <div className='text-[2rem] px-6 md:px-0 md:w-4/5 flex flex-row flex-nowrap mx-auto max-w-screen-xl border-white sm:border-b'>
         <p className='md:whitespace-nowrap pr-4 w-full border-b sm:border-none'>
-          Noun266 Merch
+          Noun 266 Merch
           <br className='md:hidden'/>
         </p>
       </div>
       <div className='text-lg py-2 max-w-screen-xl mx-auto pl-6 sm:pl-0 md:w-4/5'>
-        All merch is free (just pay gas)
+        Free + gas. Limit 1 per wallet.
       </div>
       <div className='flex flex-col items-center md:w-2/3 md:grid md:grid-cols-3 gap-4 mx-auto mt-12 max-w-screen-lg'>
         {merchTiles.map((tile, index) => (

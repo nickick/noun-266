@@ -56,8 +56,8 @@ export const merchTiles = [
     price: 'Free (just pay gas)',
   },
   {
-    title: 'Tee',
-    image: '/tiles/shirt',
+    title: 'Vinyl',
+    image: '/tiles/vinyl',
     price: 'Free (just pay gas)'
   },
   {
@@ -66,18 +66,18 @@ export const merchTiles = [
     price: 'Free (just pay gas)'
   },
   {
-    title: 'Vinyl',
-    image: '/tiles/vinyl',
+    title: 'Cassette',
+    image: '/tiles/cassette',
+    price: 'Free (just pay gas)'
+  },
+  {
+    title: 'Tee',
+    image: '/tiles/shirt',
     price: 'Free (just pay gas)'
   },
   {
     title: 'Sunglasses',
     image: '/tiles/glasses',
-    price: 'Free (just pay gas)'
-  },
-  {
-    title: 'Cassette',
-    image: '/tiles/cassette',
     price: 'Free (just pay gas)'
   },
 ]

@@ -10,7 +10,7 @@ const Video = () => {
         </p>
       </div>
       <div className='py-0 relative pt-10 h-4/5 max-w-screen-lg mx-auto sm:mt-20'>
-        <iframe src="https://player.vimeo.com/video/781320182?h=db24612c0a&color=eaeae5&title=0&byline=0&portrait=0"
+        <iframe src="https://player.vimeo.com/video/794163156?h=db24612c0a&color=eaeae5&title=0&byline=0&portrait=0"
           width="100%" height="100%"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen>
