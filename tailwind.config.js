@@ -8,7 +8,11 @@ module.exports = {
     fontFamily: {
       'sans': ['Syne', 'ui-sans-serif', 'system-ui']
     },
-    extend: {},
+    extend: {
+      screens: {
+        xs: '376px'
+      }
+    },
   },
   plugins: [],
 }
