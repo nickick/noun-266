@@ -10,7 +10,7 @@ const VideoModal = ({
 }) => {
   return (
     <Modal open={open} setOpen={setOpen}>
-      <div className='pb-[62.5%] h-screen w-screen sm:w-full sm:h-auto'>
+      <div className='h-[20rem] w-screen sm:w-full sm:h-auto sm:pb-[62.5%]'>
         <div className='w-full h-full absolute'>
           <iframe src="https://player.vimeo.com/video/794163156?h=db24612c0a&color=eaeae5&title=0&byline=0&portrait=0&autoplay=1&loop=1&playsinline=1"
             width="100%" height="100%"
