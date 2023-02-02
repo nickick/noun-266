@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           <div className='relative h-screen xs:-mb-28'>
             <Image src='/noun-266-dj.webp' alt='Noun 266 person' width='626' height='1112' className='relative mx-auto z-20 object-contain h-[70%] md:h-full transform -translate-y-28 md:-translate-y-32' style={{aspectRatio: '626 / 1112'}}/>
             <div className='absolute h-1/2 w-full mx-auto z-20 top-36 md:top-1/2 bg-gradient-to-b from-transparent via-black to-black' />
-            <div className='absolute overflow-hidden w-full h-[40rem] md:h-[100rem] -top-20 z-0'>
+            <div className='absolute overflow-hidden w-full h-[40rem] md:h-[100rem] -top-32 z-0'>
               <div className='absolute h-[40rem] md:h-[100rem] w-[40rem] md:w-[100rem] z-0 transform top-0 -translate-x-1/2 left-1/2 -translate-y-32 md:-translate-y-72 animate-pulse' style={{
                 background: 'radial-gradient(#5F40B5, #5F40B5, #000, #000, #000)'
               }} />
