@@ -22,12 +22,13 @@ export default function MintModal({
   const cancelButtonRef = useRef(null);
   const [dialogStep, setDialogStep] = useState(0);
 
-  const { setErrorMessage } = useContext(ContractContext)
+  const { setErrorMessage, resetTransaction } = useContext(ContractContext)
 
   const onClose = () => {
     setDialogStep(0);
     setOpen(undefined);
     setErrorMessage(undefined);
+    resetTransaction();
   }
 
   const merchTile = merchTiles[selectedMerchTile || 0]

@@ -25,6 +25,7 @@ interface ContextInterface {
   currentAccount: `0x${string}` | undefined;
   errorMessage: string | undefined;
   mintPublic: (tokenType: number) => Promise<false | ethers.ContractReceipt>;
+  resetTransaction: () => void;
   setErrorMessage: React.Dispatch<React.SetStateAction<string | undefined>>;
   setSwitchNetwork: React.Dispatch<React.SetStateAction<boolean>>;
   switchNetwork: boolean;
@@ -50,6 +51,11 @@ const ContractContextProvider = ({
   const [transactionResult, setTransactionResult] = useState<ethers.ContractReceipt>();
   const [switchNetwork, setSwitchNetwork] = useState(false);
   const [chainId, setChainId] = useState<number>();
+
+  const resetTransaction = () => {
+    setTransactionResult(undefined);
+    setTransactionHash(undefined);
+  }
 
   useEffect(() => {
     if (window && window.ethereum) {
@@ -230,6 +236,7 @@ const ContractContextProvider = ({
       currentAccount,
       errorMessage,
       mintPublic,
+      resetTransaction,
       setErrorMessage,
       setSwitchNetwork,
       switchNetwork,

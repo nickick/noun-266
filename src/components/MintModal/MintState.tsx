@@ -1,9 +1,6 @@
 import { Dialog } from '@headlessui/react';
-import Image from 'next/future/image';
-import Link from 'next/link';
-import { useContext, useRef, useState } from 'react';
+import { useContext, useRef } from 'react';
 import { ContractContext } from '../ContractContext';
-import TermsAndConditions from './TermsAndConditions';
 import TransactionStatus from './TransactionStatus';
 
 const MintState = ({
@@ -19,21 +16,12 @@ const MintState = ({
 }) => {
   const cancelButtonRef = useRef(null);
 
-  const [checked, setChecked] = useState(false);
-
   const {
-    currentAccount, connectWallet, mintPublic
+    currentAccount, connectWallet, mintPublic, transactionHash
   } = useContext(ContractContext)
-
-  const [termsAccepted, setTermsAccepted] = useState(false)
-
-  const handleCheck = () => {
-    setChecked(!checked)
-  }
 
   const onClick = () => {
     if (currentAccount && selectedMerchTile !== undefined) {
-      setTermsAccepted(true);
       // selectedMerchTile is 0 index but NFTs are indexed starting at 1
       mintPublic(selectedMerchTile + 1);
     } else {
@@ -55,9 +43,9 @@ const MintState = ({
             <source src={`${merchTile.image}.mp4`} type="video/mp4" />
             <source src={`${merchTile.image}.webm`} type="video/webm" />
           </video>
-          <TransactionStatus />
         </div>
-        {(selectedMerchTile !== undefined && merchTile) && (
+        <TransactionStatus />
+        {(selectedMerchTile !== undefined && merchTile && !transactionHash) && (
           <div className='space-y-6 text-center flex flex-col items-center justify-center sm:absolute sm:-right-6 h-full sm:w-1/2 flex-1 my-4 mt-12 sm:mt-0'>
             <div className='space-y-2'>
               <p className='text-2xl'>{merchTile.title}</p>

@@ -10,12 +10,12 @@ const TransactionStatus = () => {
   const token = parseInt(((transactionResult?.events || [{}])[0].data || [{}]).slice(0,66) as string, 16)
 
   return (
-    <div>
+    <div className='space-y-6 text-center flex flex-col items-center justify-center sm:absolute sm:-right-6 h-full sm:w-1/2 flex-1 my-4 mt-12 sm:mt-0'>
       {
         (transactionHash || transactionResult) && (
-          <div className='my-10'>
+          <div className='flex flex-col h-full items-center justify-center w-full flex-1'>
             {transactionHash && (
-              <div className='flex items-center space-x-4'>
+              <div className='flex items-center justify-center space-x-4'>
                 Transaction:
                 <a
                   href={`${process.env.NEXT_PUBLIC_ETHERSCAN_HOSTNAME}/tx/${transactionHash}`}
