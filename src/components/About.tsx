@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='md:w-4/5 md:mx-auto border mx-6 rounded-[40px] p-6 pb-16 pt-48 md:pt-24 md:pl-24 md:pb-16 text-base leading-8 relative mt-48 md:mt-24 max-w-screen-xl' id="bio">
+    <div className='md:w-4/5 md:mx-auto border mx-6 rounded-[40px] p-6 pb-16 pt-48 md:pt-24 md:pl-24 md:pb-16 text-base leading-8 relative mt-48 md:mt-[20rem] max-w-screen-xl' id="bio">
       <div className='md:w-[25.5rem] space-y-8 relative z-30'>
         <h3 className='text-5xl'>
           Noun 266
