@@ -10,11 +10,11 @@ export const MerchInfo = ({
 }) => (
   <>
     <video width='312' height='312' className='rounded-[15px] mt-10' autoPlay loop muted playsInline>
-            <source src={`${image}.mp4`} type="video/mp4" />
-            <source src={`${image}.webm`} type="video/webm" />
-          </video>
+      <source src={`${image}.mp4`} type="video/mp4" />
+      <source src={`${image}.webm`} type="video/webm" />
+    </video>
     <div>
-      <p className='text-2xl font-semibold'>{title}</p>
+      <p className='text-2xl font-semibold text-center'>{title}</p>
     </div>
   </>
 )
@@ -38,9 +38,9 @@ const MerchTile = ({
     }
   }
   return (
-    <div className='flex flex-col space-y-6 mb-6 sm:pb-24'>
+    <div className='flex flex-col space-y-6 mb-6 sm:pb-0'>
       <MerchInfo title={title} image={image} price={price} />
-      <button className='bg-[#DF30A8] w-full sm:w-32 py-4 rounded-lg' onClick={onClick}>
+      <button className='bg-[#DF30A8] w-full py-4 rounded-lg' onClick={onClick}>
         Mint
       </button>
     </div>
