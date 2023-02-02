@@ -74,7 +74,7 @@ const MintState = ({
               }
             </button>
             <p className='text-sm italic'>
-              Limit 1 per wallet
+              Limit 1 piece of merch per wallet
             </p>
           </div>
         )}

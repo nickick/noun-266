@@ -14,6 +14,9 @@ const ShareState = ({
   setDialogStep: Dispatch<SetStateAction<number>>,
 }) => {
   const cancelButtonRef = useRef(null);
+  const tweetMessage = `@Noun_266 just released his first single -- "We Can Have Fun".
+  There's digital merch too, but it's only available for 24 hours!
+  `
 
   return (
     <div className="bg-[rgba(26,0,2,0.6)] px-4 pt-4 pb-4 sm:p-10">
@@ -46,7 +49,7 @@ const ShareState = ({
               className="mt-3 inline-flex justify-center border rounded-md border-[#DF30A8] bg-[#DF30A8] py-4 text-base font-medium text-white shadow-sm hover:opacity-80 focus:outline-none sm:mt-6 w-44 sm:text-sm"
               onClick={() => {
                 setDialogStep(1)
-                window.open('https://twitter.com/share?text=DJ%20%40Noun_266%20just%20dropped%20his%20latest%20single%21', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+                window.open(`https://twitter.com/share?text=${encodeURIComponent(tweetMessage)}`, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
               }}
               ref={cancelButtonRef}
             >
