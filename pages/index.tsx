@@ -15,15 +15,30 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Noun 266</title>
-        <meta name="description" content="Noun266 releases his new album!" />
+        <title>Noun 266 - &quote;We can have fun&quote;</title>
+        <meta name="description" content="Debut single from Noun 266, a Noun from the Curated collection." />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="https://noun-266.vercel.app/noun266_og.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content='Noun 266 - "We can have fun"' />
+        <meta property="og:type" content="website" />
+        <meta name="description" content="Debut single from Noun 266, a Noun from the Curated collection." />
+        <meta property="og:title" content='Noun 266 - "We can have fun"' />
+        <meta property="og:description" content="Debut single from Noun 266, a Noun from the Curated collection." />
+        <meta property="og:url" content="https://noun-266.vercel.app" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@curatedxyz" />
+        <meta name="twitter:creator" content="@pepperonick" />
+        <meta name="twitter:description" content='Noun 266 - "We can have fun"' />
+        <meta name="twitter:image" content="https://noun-266.vercel.app" />
       </Head>
       <main className='bg-black w-full h-full min-h-screen text-white'>
         <div className='border-t border-t-gray-400 z-10 absolute w-screen left-0' />
         <div className='relative max-w-screen-2xl mx-auto'>
           <div className='relative h-screen min-h-[800px] xs:-mb-28'>
-            <Image src='/noun-266-dj.webp' alt='Noun 266 person' width='626' height='1112' className='relative mx-auto z-20 object-contain h-[70%] md:h-full transform -translate-y-28 md:-translate-y-32' style={{aspectRatio: '626 / 1112'}}/>
+            <Image src='/noun-266-dj.webp' alt='Noun 266 person' width='626' height='1112' className='relative mx-auto z-20 object-contain h-[70%] md:h-full transform -translate-y-28 md:-translate-y-32' style={{aspectRatio: '626 / 1112'}} priority />
             <div className='absolute h-1/2 w-full mx-auto z-20 top-36 md:top-1/2 bg-gradient-to-b from-transparent via-black to-black' />
             <div className='absolute overflow-hidden w-full h-[40rem] md:h-[100rem] -top-32 z-0'>
               <div className='absolute h-[40rem] md:h-[100rem] w-[40rem] md:w-[100rem] z-0 transform top-0 -translate-x-1/2 left-1/2 -translate-y-32 md:-translate-y-72 animate-pulse' style={{
