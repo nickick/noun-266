@@ -15,8 +15,10 @@ const ShareState = ({
 }) => {
   const cancelButtonRef = useRef(null);
   const tweetMessage = `@Noun_266 just released his first single -- "We Can Have Fun".
-  There's digital merch too, but it's only available for 24 hours!
-  `
+
+There's digital merch too, but it's only available for 24 hours!
+
+`
 
   return (
     <div className="bg-[rgba(26,0,2,0.6)] px-4 pt-4 pb-4 sm:p-10">
