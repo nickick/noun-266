@@ -14,7 +14,7 @@ export const MerchInfo = ({
       <source src={`${image}.webm`} type="video/webm" />
     </video>
     <div>
-      <p className='text-2xl font-semibold sm:text-center'>{title}</p>
+      <p className='text-2xl font-semibold text-center'>{title}</p>
     </div>
   </>
 )
