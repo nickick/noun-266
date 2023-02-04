@@ -96,7 +96,7 @@ const Home: NextPage = () => {
             </div>
             <Image src='/vinyl.png' width='940' height='418' alt='album' className='relative mt-10 md:mt-0' />
           </div>
-          <div className='bg-gradient-to-b from-[#24202F] to-black w-full h-64 z-10' />
+          <div className='bg-gradient-to-b from-[#24202F] to-black w-full h-32 sm:h-64 z-10' />
         </div>
         <Video />
         <VideoModal open={open} setOpen={setOpen} />
