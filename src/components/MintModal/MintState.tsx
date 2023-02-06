@@ -1,7 +1,10 @@
 import { Dialog } from '@headlessui/react';
-import { useContext, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { ContractContext } from '../ContractContext';
+import useInterval from '../useInterval';
 import TransactionStatus from './TransactionStatus';
+
+const SELLOUT_DATE = 1675929599 * 1000;
 
 const MintState = ({
   merchTile,
@@ -29,6 +32,14 @@ const MintState = ({
     }
   }
 
+  const [afterDate, setAfterDate] = useState(false)
+
+  useInterval(() => {
+    if(Date.now() > SELLOUT_DATE) {
+      setAfterDate(true)
+    }
+  }, 500)
+
   return (
     <div className="bg-[rgba(26,0,2,0.6)] p-4 py-8 sm:p-12 sm:py-8 sm:pb-12">
       <div className="sm:flex sm:items-start sm:justify-between relative">
@@ -55,10 +66,15 @@ const MintState = ({
               type="button"
               className="mt-3 inline-flex justify-center py-4 rounded-md text-base font-medium shadow-sm bg-[#Df30A8] hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-6 w-full sm:w-44 sm:text-sm disabled:cursor-not-allowed"
               onClick={onClick}
+              disabled={afterDate}
               ref={cancelButtonRef}
             >
               {
-                currentAccount ? 'Mint' : 'Connect Wallet'
+                currentAccount
+                  ? afterDate
+                    ? 'Sold out'
+                    : 'Mint'
+                  : 'Connect Wallet'
               }
             </button>
             <p className='text-sm italic'>

@@ -80,6 +80,8 @@ const ContractContextProvider = ({
       }
     }
 
+    // todo: connect message when wallet connect refused
+
     console.error(error);
     setErrorMessage(message);
   }
