@@ -4,7 +4,7 @@ import { ContractContext } from '../ContractContext';
 import useInterval from '../useInterval';
 import TransactionStatus from './TransactionStatus';
 
-const SELLOUT_DATE = 1675929599 * 1000;
+const SELLOUT_DATE = 1675875599 * 1000;
 
 const MintState = ({
   merchTile,
