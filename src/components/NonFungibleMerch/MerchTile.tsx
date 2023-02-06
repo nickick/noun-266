@@ -47,7 +47,7 @@ const MerchTile = ({
       {
         currentAccount ? (
           <button
-            className='bg-[#DF30A8] w-full py-4 rounded-lg'
+            className={`${contractStatus === ContractStatus.Open ? 'bg-[#DF30A8]' : 'bg-[#777]'} w-full py-4 rounded-lg`}
             onClick={onClick}
             disabled={contractStatus != ContractStatus.Open}
           >
