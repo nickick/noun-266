@@ -14,9 +14,8 @@ import contractAbi from './contractAbi.json';
 // eslint-disable-next-line no-shadow
 export const enum ContractStatus {
   Paused,
-  Premint,
-  Public,
-  Closed
+  Open,
+  Closed,
 }
 
 interface ContextInterface {
@@ -61,6 +60,9 @@ const ContractContextProvider = ({
     if (window && window.ethereum) {
 
       window.ethereum.on("chainChanged", () => {
+        window.location.reload();
+      })
+      window.ethereum.on("accountsChanged", () => {
         window.location.reload();
       })
     }

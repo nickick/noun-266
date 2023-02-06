@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ContractContext } from '../ContractContext';
 import MintModal from '../MintModal';
 import MerchTile, { merchTiles } from './MerchTile';
 

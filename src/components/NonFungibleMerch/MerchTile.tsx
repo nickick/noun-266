@@ -1,5 +1,5 @@
-import React from 'react'
-import Image from 'next/future/image'
+import React, { useContext } from 'react'
+import { ContractContext, ContractStatus } from '../ContractContext'
 
 export const MerchInfo = ({
   title, image, price
@@ -37,11 +37,23 @@ const MerchTile = ({
       setOpen(index)
     }
   }
+
+  const { contractStatus } = useContext(ContractContext);
+
   return (
     <div className='flex flex-col space-y-6 mb-6 sm:pb-0'>
       <MerchInfo title={title} image={image} price={price} />
-      <button className='bg-[#DF30A8] w-full py-4 rounded-lg' onClick={onClick}>
-        Mint
+      <button
+        className='bg-[#DF30A8] w-full py-4 rounded-lg'
+        onClick={onClick}
+        disabled={contractStatus != ContractStatus.Open}
+      >
+        {contractStatus === ContractStatus.Paused
+          ? 'Mint not open'
+          : contractStatus === ContractStatus.Closed
+          ? 'Mint has ended'
+          : 'Mint'
+        }
       </button>
     </div>
   )
