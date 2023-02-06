@@ -8,7 +8,7 @@ import abi from '../ContractContext/contractAbi.json'
 const TransactionStatus = () => {
   const { transactionHash, transactionResult } = useContext(ContractContext)
   const token = parseInt(((transactionResult?.events || [{}])[0].data || [{}]).slice(0,66) as string, 16)
-  const tweetMessage = `I just minted some digital merch for @noun_266's new hit song "We Can Have Fun" ⌐▨_▨
+  const tweetMessage = `I just minted some digital merch for @noun_266's new hit song "We Can Have Fun" ⌐◨-◨
 
 `
 

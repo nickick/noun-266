@@ -14,7 +14,7 @@ const ShareState = ({
   setDialogStep: Dispatch<SetStateAction<number>>,
 }) => {
   const cancelButtonRef = useRef(null);
-  const tweetMessage = `@Noun_266 just released his first single -- "We Can Have Fun".
+  const tweetMessage = `.@Noun_266 just released his first single -- "We Can Have Fun".
 
 There's digital merch too, but it's only available for 24 hours!
 
