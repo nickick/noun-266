@@ -12,10 +12,10 @@ const ConnectButton = ({
   return (
     <div
       onClick={connectWallet}
-      className={`rounded-2xl w-1/2 sm:w-full mx-auto my-6 sm:my-0 px-6 py-2 ${matchMintButton ? 'sm:py-4' : 'sm:py-0'} cursor-pointer text-center bg-[#DF30A8]`}
+      className={`rounded-xl w-1/2 sm:w-full mx-auto my-6 sm:my-0 px-6 py-2 ${matchMintButton ? 'sm:py-4' : 'sm:py-0'} cursor-pointer text-center bg-[#DF30A8]`}
     >
       {!currentAccount
-        ? 'Connect'
+        ? matchMintButton ? 'Mint' : 'Connect'
         : `${shortenAddress(currentAccount)}`
       }
     </div>

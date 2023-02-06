@@ -15,24 +15,24 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Noun 266 - &quote;We can have fun&quote;</title>
-        <meta name="description" content="Debut single from Noun 266, a Noun from the Curated collection." />
+        <title>We Can Have Fun by Noun 266</title>
+        <meta name="description" content='The debut single from Noun 266 "We Can Have Fun" is out now!' />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:image" content="https://noun-266.vercel.app/noun266_og.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content='Noun 266 - "We can have fun"' />
+        <meta property="og:image:alt" content='Noun 266' />
         <meta property="og:type" content="website" />
-        <meta name="description" content="Debut single from Noun 266, a Noun from the Curated collection." />
-        <meta property="og:title" content='Noun 266 - "We can have fun"' />
-        <meta property="og:description" content="Debut single from Noun 266, a Noun from the Curated collection." />
+        <meta name="description" content='The debut single from Noun 266 "We Can Have Fun" is out now!' />
+        <meta property="og:title" content='"We Can Have Fun" by Noun 266' />
+        <meta property="og:description" content='The debut single from Noun 266 "We Can Have Fun" is out now!' />
         <meta property="og:url" content="https://noun-266.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@curatedxyz" />
-        <meta name="twitter:creator" content="@curatedxyz" />
-        <meta name="twitter:title" content='Noun 266 - "We can have fun"' />
-        <meta name="twitter:description" content='Debut single from Noun 266, a Noun from the Curated collection.' />
+        <meta name="twitter:site" content="https://www.noun266.xyz" />
+        <meta name="twitter:creator" content="@Noun_266" />
+        <meta name="twitter:title" content='"We Can Have Fun" by Noun 266' />
+        <meta name="twitter:description" content='The debut single from Noun 266 "We Can Have Fun" is out now!' />
         <meta name="twitter:image" content="https://noun-266.vercel.app/noun266_og.png" />
       </Head>
       <main className='bg-black w-full h-full min-h-screen text-white'>
