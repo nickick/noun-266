@@ -23,6 +23,7 @@ interface ContextInterface {
   contractStatus: ContractStatus;
   currentAccount: `0x${string}` | undefined;
   errorMessage: string | undefined;
+  hasMintedNFT: boolean;
   mintPublic: (tokenType: number) => Promise<false | ethers.ContractReceipt>;
   resetTransaction: () => void;
   setErrorMessage: React.Dispatch<React.SetStateAction<string | undefined>>;
@@ -50,6 +51,7 @@ const ContractContextProvider = ({
   const [transactionResult, setTransactionResult] = useState<ethers.ContractReceipt>();
   const [switchNetwork, setSwitchNetwork] = useState(false);
   const [chainId, setChainId] = useState<number>();
+  const [hasMintedNFT, setHasMintedNFT] = useState(false);
 
   const resetTransaction = () => {
     setTransactionResult(undefined);
@@ -218,14 +220,37 @@ const ContractContextProvider = ({
     }
   };
 
+  const checkHasMinted = async () => {
+    const { ethereum } = window;
+
+    try {
+      if (!ethereum) {
+        // eslint-disable-next-line no-alert
+        alert('Please install MetaMask or another wallet provider.');
+        return false;
+      }
+
+      if (currentAccount) {
+        const contract = getContract();
+        const status = await contract.addressHasMinted(currentAccount);
+        setHasMintedNFT(status);
+      }
+    } catch (error) {
+      console.error('mintPublic');
+      handleError(error);
+      return false;
+    }
+  }
+
   useEffect(() => {
     if (switchNetwork) return;
 
     checkIfWalletIsConnected();
     if (currentAccount) {
       getContractStatus();
+      checkHasMinted();
     }
-  }, [checkIfWalletIsConnected, currentAccount, getContractStatus, switchNetwork]);
+  }, [checkIfWalletIsConnected, currentAccount, getContractStatus, switchNetwork, checkHasMinted]);
 
   useInterval(() => {
     if (currentAccount && !switchNetwork) {
@@ -239,6 +264,7 @@ const ContractContextProvider = ({
       contractStatus,
       currentAccount,
       errorMessage,
+      hasMintedNFT,
       mintPublic,
       resetTransaction,
       setErrorMessage,

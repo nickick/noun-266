@@ -39,7 +39,7 @@ const MerchTile = ({
     }
   }
 
-  const { currentAccount, contractStatus } = useContext(ContractContext);
+  const { currentAccount, contractStatus, hasMintedNFT } = useContext(ContractContext);
 
   return (
     <div className='flex flex-col space-y-6 mb-6 sm:pb-0'>
@@ -47,11 +47,13 @@ const MerchTile = ({
       {
         currentAccount ? (
           <button
-            className={`${contractStatus === ContractStatus.Open ? 'bg-[#DF30A8]' : 'bg-[#777]'} w-full py-4 rounded-lg`}
+            className={`${contractStatus === ContractStatus.Open && !hasMintedNFT ? 'bg-[#DF30A8]' : 'bg-[#777]'} w-full py-4 rounded-lg`}
             onClick={onClick}
-            disabled={contractStatus != ContractStatus.Open}
+            disabled={contractStatus != ContractStatus.Open || hasMintedNFT}
           >
-            {contractStatus === ContractStatus.Paused
+            { hasMintedNFT
+            ? 'Already minted'
+            : contractStatus === ContractStatus.Paused
               ? 'Mint not open'
               : contractStatus === ContractStatus.Closed
               ? 'Mint has ended'

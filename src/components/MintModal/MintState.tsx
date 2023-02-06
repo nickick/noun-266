@@ -20,7 +20,7 @@ const MintState = ({
   const cancelButtonRef = useRef(null);
 
   const {
-    currentAccount, connectWallet, mintPublic, transactionHash
+    currentAccount, connectWallet, hasMintedNFT, mintPublic, transactionHash
   } = useContext(ContractContext)
 
   const onClick = () => {
@@ -66,14 +66,16 @@ const MintState = ({
               type="button"
               className="mt-3 inline-flex justify-center py-4 rounded-md text-base font-medium shadow-sm bg-[#Df30A8] hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-6 w-full sm:w-44 sm:text-sm disabled:cursor-not-allowed"
               onClick={onClick}
-              disabled={afterDate}
+              disabled={afterDate || hasMintedNFT}
               ref={cancelButtonRef}
             >
               {
                 currentAccount
-                  ? afterDate
-                    ? 'Sold out'
-                    : 'Mint'
+                  ? hasMintedNFT
+                    ? 'Already minted'
+                    : afterDate
+                      ? 'Sold out'
+                      : 'Mint'
                   : 'Connect Wallet'
               }
             </button>
