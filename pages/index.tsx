@@ -27,12 +27,13 @@ const Home: NextPage = () => {
         <meta name="description" content="Debut single from Noun 266, a Noun from the Curated collection." />
         <meta property="og:title" content='Noun 266 - "We can have fun"' />
         <meta property="og:description" content="Debut single from Noun 266, a Noun from the Curated collection." />
-        <meta property="og:url" content="https://noun-266.vercel.app" />
+        <meta property="og:url" content="https://noun-266.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@curatedxyz" />
-        <meta name="twitter:creator" content="@pepperonick" />
-        <meta name="twitter:description" content='Noun 266 - "We can have fun"' />
-        <meta name="twitter:image" content="https://noun-266.vercel.app" />
+        <meta name="twitter:creator" content="@curatedxyz" />
+        <meta name="twitter:title" content='Noun 266 - "We can have fun"' />
+        <meta name="twitter:description" content='Debut single from Noun 266, a Noun from the Curated collection.' />
+        <meta name="twitter:image" content="https://noun-266.vercel.app/noun266_og.png" />
       </Head>
       <main className='bg-black w-full h-full min-h-screen text-white'>
         <div className='border-t border-t-gray-400 z-10 absolute w-screen left-0' />
