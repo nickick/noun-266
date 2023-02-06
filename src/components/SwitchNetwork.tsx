@@ -28,7 +28,7 @@ const SwitchNetwork = () => {
             isDebug()
               ? 'Switch to Goerli for debugging'
               : 'Detected test network, switch to Ethereum Mainnet to migrate'
-            : 'Merch only available for a limited time! Until 7:59:59 AM PST 2/8/23.'
+            : 'Merch only available for a limited time! Until 8:59:59 AM PST 2/9/23.'
           }
         </span>
       </div>
