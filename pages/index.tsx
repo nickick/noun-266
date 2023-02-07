@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <title>We Can Have Fun by Noun 266</title>
         <meta name="description" content='The debut single from Noun 266 "We Can Have Fun" is out now!' />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="https://noun-266.vercel.app/noun266_og.png" />
+        <meta property="og:image" content="https://www.noun266.xyz/noun266_og.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -27,13 +27,11 @@ const Home: NextPage = () => {
         <meta name="description" content='The debut single from Noun 266 "We Can Have Fun" is out now!' />
         <meta property="og:title" content='"We Can Have Fun" by Noun 266' />
         <meta property="og:description" content='The debut single from Noun 266 "We Can Have Fun" is out now!' />
-        <meta property="og:url" content="https://noun-266.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="https://www.noun266.xyz" />
         <meta name="twitter:creator" content="@Noun_266" />
         <meta name="twitter:title" content='"We Can Have Fun" by Noun 266' />
         <meta name="twitter:description" content='The debut single from Noun 266 "We Can Have Fun" is out now!' />
-        <meta name="twitter:image" content="https://noun-266.vercel.app/noun266_og.png" />
+        <meta name="twitter:image" content="https://www.noun266.xyz/noun266_og.png" />
       </Head>
       <main className='bg-black w-full h-full min-h-screen text-white'>
         <div className='border-t border-t-gray-400 z-10 absolute w-screen left-0' />

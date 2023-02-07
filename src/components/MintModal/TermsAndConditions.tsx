@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown'
 const TermsAndConditionText = `
 **TERMS OF USE**
 
-We Can Have Fun by Noun266 
+We Can Have Fun by Noun266
 
 *Last updated November 22, 2022*
 
