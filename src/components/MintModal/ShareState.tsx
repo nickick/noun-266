@@ -1,5 +1,4 @@
 import { Dialog } from '@headlessui/react';
-import Image from 'next/future/image';
 import { Dispatch, SetStateAction, useRef } from 'react';
 
 const ShareState = ({
