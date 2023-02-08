@@ -35,7 +35,7 @@ const Header = ({
   return (
     <div className={`${borderOnly ? 'absolute' : 'relative'} top-0 w-full font-sans text-white flex justify-between z-50`}>
       <div className="border-r-gray-400 md:border-r font-medium p-[2.5rem] text-2xl">
-        <a href="/">Noun266</a>
+        Noun266
       </div>
       <div className="flex justify-end items-center font-normal md:space-x-6 p-[2.5rem] pr-12" style={{
           opacity: borderOnly ? 0 : 1
