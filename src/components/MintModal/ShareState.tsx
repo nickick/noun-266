@@ -13,11 +13,11 @@ const ShareState = ({
   setDialogStep: Dispatch<SetStateAction<number>>,
 }) => {
   const cancelButtonRef = useRef(null);
-  const tweetMessage = `.@Noun_266 just released his first single -- "We Can Have Fun".
+  const tweetMessage = `.@Noun_266 just dropped his debut CC0 single "We Can Have Fun".
 
-There's digital merch too, but it's only available for 24 hours!
+Check out the music video, and grab some digital merch available for 24 hours!
 
-`
+www.noun266.xyz`
 
   return (
     <div className="bg-[rgba(26,0,2,0.6)] px-4 pt-4 pb-4 sm:p-10">
