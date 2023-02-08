@@ -63,7 +63,7 @@ const ContractContextProvider = ({
     if (window && window.ethereum) {
 
       window.ethereum.on("chainChanged", () => {
-        window.location.reload();
+        // window.location.reload();
       })
       window.ethereum.on("accountsChanged", (accounts: `0x${string}`[]) => {
         setCurrentAccount(accounts[0]);
