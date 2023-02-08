@@ -47,9 +47,9 @@ const MerchTile = ({
       {
         currentAccount ? (
           <button
-            className={`${contractStatus === ContractStatus.Paused && !hasMintedNFT ? 'bg-[#DF30A8]' : 'bg-[#777]'} w-full py-4 rounded-lg`}
+            className={`${contractStatus === ContractStatus.Open && !hasMintedNFT ? 'bg-[#DF30A8]' : 'bg-[#777]'} w-full py-4 rounded-lg`}
             onClick={onClick}
-            disabled={contractStatus != ContractStatus.Paused || hasMintedNFT}
+            disabled={contractStatus != ContractStatus.Open || hasMintedNFT}
           >
             { hasMintedNFT
             ? 'Already minted'
