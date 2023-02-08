@@ -47,14 +47,14 @@ const MerchTile = ({
       {
         currentAccount ? (
           <button
-            className={`${contractStatus === ContractStatus.Open && !hasMintedNFT ? 'bg-[#DF30A8]' : 'bg-[#777]'} w-full py-4 rounded-lg`}
+            className={`${contractStatus != ContractStatus.Closed && !hasMintedNFT ? 'bg-[#DF30A8]' : 'bg-[#777]'} w-full py-4 rounded-lg`}
             onClick={onClick}
-            disabled={contractStatus != ContractStatus.Open || hasMintedNFT}
+            disabled={contractStatus === ContractStatus.Closed || hasMintedNFT}
           >
             { hasMintedNFT
             ? 'Already minted'
             : contractStatus === ContractStatus.Paused
-              ? 'Mint not open'
+              ? 'Mint'
               : contractStatus === ContractStatus.Closed
               ? 'Mint has ended'
               : 'Mint'
