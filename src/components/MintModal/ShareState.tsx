@@ -15,7 +15,7 @@ const ShareState = ({
   const cancelButtonRef = useRef(null);
   const tweetMessage = `.@Noun_266 just dropped his debut CC0 single "We Can Have Fun".
 
-Check out the music video, and grab some digital merch available for 24 hours!
+Check out the music video and grab some digital merch (only available for 24 hours)!
 
 www.noun266.xyz`
 
