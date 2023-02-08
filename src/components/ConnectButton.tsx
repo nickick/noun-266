@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ContractContext } from './ContractContext';
+import { ContractContext, ContractStatus } from './ContractContext';
 import shortenAddress from './utils/shortenAddress';
 
 const ConnectButton = ({
@@ -9,10 +9,11 @@ const ConnectButton = ({
   matchMintButton?: boolean
   callback?: () => void;
 }) => {
-  const { connectWallet, currentAccount } = useContext(ContractContext);
+  const { connectWallet, currentAccount, getContractStatus } = useContext(ContractContext);
   const onClick = async () => {
     const status = await connectWallet()
-    if (status === 'success' && callback) {
+    const contractStatus = await getContractStatus()
+    if (status === 'success' && (contractStatus === ContractStatus.Open) && callback) {
       callback()
     }
   }

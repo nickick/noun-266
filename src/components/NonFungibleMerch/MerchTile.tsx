@@ -3,7 +3,7 @@ import ConnectButton from '../ConnectButton'
 import { ContractContext, ContractStatus } from '../ContractContext'
 
 export const MerchInfo = ({
-  title, image, price
+  title, image
 }: {
   title: string,
   image: string

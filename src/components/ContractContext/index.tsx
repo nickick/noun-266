@@ -21,6 +21,7 @@ export const enum ContractStatus {
 interface ContextInterface {
   connectWallet: () => Promise<string>;
   contractStatus: ContractStatus;
+  getContractStatus: () => Promise<number>;
   currentAccount: `0x${string}` | undefined;
   errorMessage: string | undefined;
   hasMintedNFT: boolean;
@@ -266,6 +267,7 @@ const ContractContextProvider = ({
       contractStatus,
       currentAccount,
       errorMessage,
+      getContractStatus,
       hasMintedNFT,
       mintPublic,
       resetTransaction,
