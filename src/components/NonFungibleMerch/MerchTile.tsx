@@ -61,7 +61,7 @@ const MerchTile = ({
             }
           </button>
         ) : (
-          <ConnectButton matchMintButton />
+          <ConnectButton matchMintButton callback={onClick} />
         )
       }
 

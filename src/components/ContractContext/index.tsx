@@ -19,7 +19,7 @@ export const enum ContractStatus {
 }
 
 interface ContextInterface {
-  connectWallet: () => void;
+  connectWallet: () => Promise<string>;
   contractStatus: ContractStatus;
   currentAccount: `0x${string}` | undefined;
   errorMessage: string | undefined;
@@ -123,12 +123,14 @@ const ContractContextProvider = ({
       if (accounts) {
         setCurrentAccount(accounts[0]);
       }
+      return 'success'
     } catch (error) {
       let message = 'Unknown Error';
       if (error instanceof Error) message = error.message;
 
       console.error(message);
       setErrorMessage(message);
+      return 'failure'
     }
   };
 
