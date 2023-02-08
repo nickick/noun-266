@@ -68,9 +68,9 @@ const Home: NextPage = () => {
                     </span>
                   </div>
                   <button className='w-full h-[3.5rem] border border-white rounded-full relative flex sm:hidden justify-center items-center bg-[#DF30A8] mt-4' onClick={() => setOpen(true)}>
-                    <Image src='/play-button.svg' alt='Noun 266 button' height='32' width='32' className='relative h-4 w-4 left-4' />
+                    <Image src='/play-button.svg' alt='Noun 266 button' height='32' width='32' className='relative h-4 w-4' />
                     &nbsp;
-                    <span className='text-white font-semi-bold relative left-3 text-xl md:text-5xl'>
+                    <span className='text-white font-semi-bold relative text-xl md:text-5xl'>
                       Play
                     </span>
                   </button>
