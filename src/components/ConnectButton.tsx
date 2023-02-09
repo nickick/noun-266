@@ -25,7 +25,7 @@ const ConnectButton = ({
       disabled
     >
       {!currentAccount
-        ? matchMintButton ? 'Mint' : 'Connect'
+        ? matchMintButton ? 'Mint has closed' : 'Connect'
         : `${shortenAddress(currentAccount)}`
       }
     </button>
